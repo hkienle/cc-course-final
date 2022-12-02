@@ -4,9 +4,17 @@ tags: cc, course-cc
 ---
 
 :::info
+**legal information**
+
+(c) Holger Kienle
+
 ![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg =x40)  
 Except where otherwise noted, this document's content is licensed under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
 Please attribute this document to *hmk* (pseudonym) and link it with [https://hackmd.io/@hkienle/course-cc-final/](https://hackmd.io/@hkienle/course-cc-final/)
+
+For **screenshots** made by the author:
+- Making a screenshot is believed to be [fair use](https://psu.libanswers.com/faq/333836), thus not violating any copyright that may exist in the depicted GUI.
+- To remove doubt, if the screenshot depicts content by the author, it is licensed under CC BY-SA 4.0.
 :::
 
 **CC Certificate for Educators - Fall 2022 - Final**
@@ -17,12 +25,16 @@ Please attribute this document to *hmk* (pseudonym) and link it with [https://ha
 
 This case study looks at the workflow to produce a 3D artifact from its design to its physical instantiation with a 3D printer. The workflow produces several digital artifacts and in the end a physical artifact. The case study discusses intellectual property (IP) and licensing considerations for each artifact.
 
-The starting point of the case study is this CC logo (2D):
+> ![](https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.png =x120)  
+> *Starting point: CC heart logo* by Creative Commons, copyrighted, trademark policy applies, believed to be fair use as a subject of scholarly discussion
 
-![](https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.png =x120)  
-*CC heart logo* by Creative Commons, copyrighted
+The starting point of the case study is the CC logo with a heart outline (2D).
 
-At the end we will have produced a physical 3D object that can function as as stamp.
+> @@@  
+> Result: stamp
+
+At the end we will have produced a physical 3D object that can function as a "rubber stamp".
+
 
 ### open and free
 
@@ -37,13 +49,12 @@ The following table gives an overview of the used software tools.
 
 
 An aspect easily overlooked is that software should operate on [open file formats](https://en.wikipedia.org/wiki/Open_file_format), which are  defined by an openly published specification. Conversely, it is desirable to avoid [proprietary formats](https://en.wikipedia.org/wiki/Proprietary_file_format). This case study uses:
-| format | domain | license |
+| format | domain | specification license |
 | -------- | -------- | -------- |
-| SVG     | vector images | [W3C Document License](http://www.w3.org/Consortium/Legal/copyright-documents) |
-| STL |  triangulated surfaces | [openly documented, but proprietary](https://www.loc.gov/preservation/digital/formats/fdd/fdd000504.shtml) (?)|
-| markdown | documentation | ? |
-| PNG | bitmap images | [W3C Software and Document Notice and License](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
-
+| SVG     | vector images (2D) | [W3C Document License](http://www.w3.org/Consortium/Legal/copyright-documents) |
+| STL | triangulated surfaces (3D objects) | [openly documented, but proprietary](https://www.loc.gov/preservation/digital/formats/fdd/fdd000504.shtml) (?)|
+| markdown | documentation, many dialects | [CommonMark Spec](https://spec.commonmark.org/): CC BY-SA  |
+| PNG | bitmap images (screenshots)| [W3C Software and Document Notice and License](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
 
 
 ## meta
@@ -84,8 +95,8 @@ The first step in our workflow is to analyze the logo with the help of Inkscape.
 :::warning
 **CC heart logo**
 
-![](https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.png =x120)  
-[*CC heart logo*](https://creativecommons.org/about/downloads/) by Creative Commons, copyrighted, no copyright license. Should be considered a trademark by Creative Commons.
+> ![](https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.png =x120)  
+> [*CC heart logo*](https://creativecommons.org/about/downloads/) by Creative Commons, copyrighted, no copyright license. Should be considered a trademark by Creative Commons.
 
 Our logo, in the following called *heart logo*, is an interesting case to consider:
 - It is (automatically) copyrighted and has no CC license.
@@ -98,15 +109,16 @@ The hear logo has two graphical elements:
 
 The heart outline may be considered a *basic shape* -- part of the [suits of playing cards](https://en.wikipedia.org/wiki/Playing_card_suit), originating more than 500 years ago --, which is not protected by copyright. (As a side note, it's fascinating that a heart shape can be defined with a mathematical function.)
 
-![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Heart_plot.svg =x150)  
-Plot of a mathematical function that yields a heart symbol, by [Eviatar Bach](https://commons.wikimedia.org/wiki/File:Heart_plot.svg), CC Zero (placed in the public domain to the extend possible)
+> ![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Heart_plot.svg =x150)  
+> *Plot of a mathematical function that yields a heart symbol* by [Eviatar Bach](https://commons.wikimedia.org/wiki/File:Heart_plot.svg), placed in the public domain with CC Zero
 
 The letter "c" itself is not under copyright and the particular shape of the "c" may be also not under copyright. The encoding of the "c" in the font file of CC Accidenz Commons may be under copyright (and this file is licensed with CC BY-SA 4.0).
 
 Regardless whether the individual graphical elements (heart and "c") have copyright protections or not, the unique composition of the shapes that make up the heart logo result in copyright protection!
 
 Independently of the logo's copyright status, the heart logo is (indirectly) claimed as a trademark of Creative Commons:
-> Our registered trademarks and other trademarks include [...] CC (including the CC in a circle logo (the “CC Logo”) and CC standing alone)
+> Our registered trademarks and other trademarks include [...] CC (including the **CC in a circle logo** (the “CC Logo”) and CC standing alone) [...]  
+> (boldface added)
 
 The heart logo has not been registered, but the more common CC logo with a circle is.
 :::
@@ -121,10 +133,10 @@ According to [Kattwinkel](https://www.owe.com/resources/legalities/legalities-15
 
 While a simple rectangle and the abstract idea of a rectangle are not protected by copyright, depicting a rectangle in a distinctive and creative way probably yields copyright protection (e.g., the use of color-gradients and shadows may accomplish this). Generally, in copyright law ["the amount of creativity required is very little"](https://copyright.uslegal.com/enumerated-categories-of-copyrightable-works/creativity-requirement/).
 
-![](https://i.imgur.com/bcVA6nb.png =x100)  
-*A yellow rectangle on black background*, copied and cropped from somewhere on the Internet, considered fair use. Note that his has nothing to do with the National Geographic logo, any similarity would constitute a coincidence.
+> ![](https://i.imgur.com/bcVA6nb.png =x100)  
+> *A yellow rectangle on black background*, copied and cropped from somewhere on the Internet, considered fair use. Note that this has nothing to do with the National Geographic logo, any similarity would constitute a coincidence.
 
-A simple rectangle cannot be copyrighted, but it may constitute a logo under trademark law (e.g., [National Geographic](https://help.nationalgeographic.com/s/article/logo-use-and-trademark)).
+A simple rectangle cannot be copyrighted, but a particular rectangle may be protected under trademark law (e.g., [National Geographic](https://help.nationalgeographic.com/s/article/logo-use-and-trademark)).
 :::
 
 
@@ -135,12 +147,12 @@ A logo can enjoy both copyright and trademark protection. Copyright applies auto
 
 Optionally, a trademark can be registered with the US Patent and Trademark Office. It is then recorded in a database and it can be marked with :registered:. The CC logo is an example of a registered trademark.
 
-![](https://i.imgur.com/g3Un7Q0.png =x300)  
-Screenshot of [TESS](https://www.uspto.gov/trademarks/search/using-trademark-electronic-search-system) record, believed to be in the public domain because "most government-produced materials appearing on this website are not subject to copyright restrictions within the United States"; screenshot by hmk, licensed under CC BY 4.0 and put into the public domain with CC Zero
+> ![](https://i.imgur.com/g3Un7Q0.png =x300)  
+> Screenshot of [TESS](https://www.uspto.gov/trademarks/search/using-trademark-electronic-search-system) record, believed to be in the public domain in the US because "most government-produced materials appearing on this website are not subject to copyright restrictions within the United States"; screenshot by hmk
 
 A trademark can have a *trademark policy* that governs the use of the trademark. A trademark policy is necessary if the trademark owner wants to allow third-parties to use it under certain conditions. [Creative Commons has a trademark policy](https://creativecommons.org/policies) for its CC logos, buttons, license elements, etc.
 
-The items that apply to the CC trademark policy are also (automatically) copyrighted. However, they do not have a CC license because ["applying a CC license to your trademarks and logos could even result in a loss of your trademark rights altogether"](https://creativecommons.org/faq/#could-i-use-a-cc-license-to-share-my-logo-or-trademark)!
+The artworks are covered by the CC trademark policy are (automatically) copyrighted. However, they do not have a CC license because ["applying a CC license to your trademarks and logos could even result in a loss of your trademark rights altogether"](https://creativecommons.org/faq/#could-i-use-a-cc-license-to-share-my-logo-or-trademark)! (Conversely, [Wikimedia has licensed its logos](https://diff.wikimedia.org/2014/10/24/wikimedia-logos-have-been-freed/) under CC BY-SA 3.0 even though they are trademarks and come with a trademark policy.)
 :::
 
 
@@ -172,8 +184,8 @@ A SVG file specifies drawing instructions along with coordinates. You can move t
 
 Perhaps amazingly, what you see in the SVG excerpt is the first letter "c" in the heart logo. If you look closely, the "c" has 2 straight lines and 2 curvy parts -- and this is reflected in the SVG with 2 line commands (`l`) and 2 Bézier commands (`c`).
 
-![](https://i.imgur.com/cUa6hpG.png =x300)  
-*Screenshot of "c"* in CodePen by hmk, licensed under CC Zero
+> ![](https://i.imgur.com/cUa6hpG.png =x300)  
+> *Screenshot of "c"* in CodePen by hmk
 
 I [uploaded the SVG excerpt to CodePen](https://codepen.io/anon42/pen/GRGBzoJ?editors=1000), which allows live-rendering and editing the "c" letter.
 
@@ -191,8 +203,8 @@ A font, or typeface, has two separate concepts:
 2.  The digital encoding of a font with the help of a [font file](https://en.wikipedia.org/wiki/Computer_font).
 
 It seems that fonts is an area of copyright law that can differ significantly on the jurisdiction. In the US, according to [Wikipedia](https://en.wikipedia.org/wiki/Intellectual_property_protection_of_typefaces),
-1. "the **shapes** of typefaces are **not eligible for copyright**, though the shapes may be protected by design patent " (bold added).
-2. "a **font file** of computer instructions in a domain-specific programming language, may be **protectable by copyright**" (bold added).
+1. "the **shapes** of typefaces are **not eligible for copyright**, though the shapes may be protected by design patent " (boldface added).
+2. "a **font file** of computer instructions in a domain-specific programming language, may be **protectable by copyright**" (boldface added).
 
 As a concrete example, the [CC Accidenz Commons](https://creativecommons.org/2019/10/28/accidenz-commons-open-licensed-font/) font is under a CC BY-SA 4.0 license. In the US, this license does not apply to the glyphs' shapes themselves because they are not covered by copyright.
 
@@ -201,17 +213,29 @@ If anything, the CC license applies to the font file, which encodes the glyphs i
 
 
 :::warning
+**FreeCAD excursion: reverse engineering of shapes**
+
+You can start with a 2D shape (say the letter of a font) and recreate its shape. Technically, this is not copying, but reverse engineering. Generally speaking, reverse engineering is a well establish technique in engineering and it is legal. Recreating the letter of a font may be legal too.
+
+> ![](https://i.imgur.com/LiK0Rqw.png)  
+> *Tracing the outline of a handle in FreeCAD*. [FreeCAD for Makers](https://hackspace.raspberrypi.com/books/freecad), Jo Hinchliffe, HackSpace, September 2022. Licensed with CC BY-NC-SA 3.0. [PDF download](https://hackspace.raspberrypi.com/downloads/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBazhkIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5cc6d95c1be694fba3150e7c3f8f7245b090f203/HS_FreeCAD_Bookazine.pdf). Cropped from original
+
+FreeCAD can be used to recreate shapes approximately. For example, you can take a 2D picture of a 3D object and load the picture into FreeCAD. You can then trace the outline in FreeCAD to obtain a geometric encoding of the shape.
+:::
+
+
+:::warning
 **Inkscape: Rendering and manipulating the heart logo**
 
 Inkscape can load and render SVG files. Thus, we can load the heart logo with Inkscape and explore its properties.
 
-![](https://i.imgur.com/odIzBFU.png =x250)  
-*Inkscape screenshot of first "c" in heart logo* by hmk, licensed under CC BY-SA 4.0.
+> ![](https://i.imgur.com/odIzBFU.png =x250)  
+> *Inkscape screenshot of first "c" in heart logo* by hmk
 
 Ofter ungrouping and using the [node tool](https://inkscape-manuals.readthedocs.io/en/latest/node-operations.html), we can graphically see the nodes that make up the "c".
 
-![](https://i.imgur.com/YDIRp8Q.png =x250)  
-*Inkscape screenshot of mutilated "c" in heart logo* by hmk, licensed under CC BY-SA 4.0.
+> ![](https://i.imgur.com/YDIRp8Q.png =x250)  
+> *Inkscape screenshot of mutilated "c" in heart logo* by hmk
 
 The nodes can be interactively manipulated to arrive at a mutilated "c", creating a derivative work. Since the file that contains the "c" is CC BY-SA 4.0, the derived shape should be licensed likewise. Or is the font file a collection of glyphs? If so, we do not know the license of the individual glyphs and have to assume each glyph is copyrighted -- if copyright protection applies in the first place.
 
@@ -224,14 +248,14 @@ For our case study we will not change the shape of the heart logo, we are only [
 
 FreeCAD can import an SVG image with `File > Import...`. Each SVG closed path is converted to a corresponding [FreeCAD `Wire`](https://wiki.freecadweb.org/Draft_Wire) object.
 
-![](https://i.imgur.com/sK7d2TU.png)
-*Imported heart logo into FreeCAD (with axis cross)* by hmk, licensed under CC BY-SA 4.0
+> ![](https://i.imgur.com/sK7d2TU.png)
+> *Imported heart logo into FreeCAD (with axis cross)* by hmk
 
 Since the heart logo has 4 closed path, we get 4 corresponding `Wire` objects named `Path`, `Path001`, `Path002` and `Path003`. The objects are placed on the XY-plane in the 3D space.
 
 We can rename the objects to more telling names: `heart-inner`, `heart-outer`, `c-first` and `c-second`, respectively.
 
-We now have the same shape in a different encoding. If the logo was under a ND license, it would be allowed to do just that.
+We now have the same shape in a different encoding. (Changing the format/encoding is allowed for all CC licenses, even with a ND license element; but remember, the heart logo has no CC license.)
 :::
 
 
@@ -240,10 +264,10 @@ We now have the same shape in a different encoding. If the logo was under a ND l
 
 By default the design in a FreeCAD file is `All rights reserved`. To change this, go to `File > Project information...` to pick a CC license.
 
-![](https://i.imgur.com/XF8BDpa.png)  
-This screenshot by *hmk* is licensed under CC BY. Place in the public domain with CC Zero. Making a screenshot is believed to be [fair use](https://psu.libanswers.com/faq/333836).
+> ![](https://i.imgur.com/XF8BDpa.png)  
+> This screenshot by *hmk* is licensed under CC BY. Placed into the public domain with CC Zero
 
-The license URL is filled out automatically (with version 4.0). Note that CC Zero is not available, but you can use the `Other` category for more flexibility.
+The license URL is filled in automatically (with version 4.0). Note that CC Zero is not available, but you can use the `Other` category for more flexibility.
 
 There is a `Created by` text field that can be used for the *A* in *TASL*. There is a also a `Comment` text field that can be (ab)used for more detailed attribution or licensing information.
 
@@ -260,18 +284,63 @@ We are now ready to enter the world of 3D with the help of FreeCAD, which allows
 
 Let's say you select an existing 2D work under copyright and "extend" it into a 3D work. For example, you select a cartoon character that previously existed on paper only and make a sculpture out of it. Generally speaking such a modification is a copyright infringement.
 
-![](https://i.imgur.com/rHmbG5t.png =x250)
+> ![](https://i.imgur.com/rHmbG5t.png =x250)
 ![](https://i.imgur.com/IFTCs0N.png =x250)  
-From 2D to 3D. Left: detail of photograph (postcard) by Art Rogers, copyrighted. Right: corresponding detail of sculpture by Jeff Koons, copyrighted. Details of images taken from the article *Art Rogers vs. Jeff Koons* by [Jeff Traub](https://designobserver.com/feature/art-rogers-vs-jeff-koons/6467/), believed to be fair use.
+> From 2D to 3D. Left: detail of photograph (postcard) by Art Rogers, copyrighted. Right: corresponding detail of sculpture by Jeff Koons, copyrighted. Details of images taken from the article *Art Rogers vs. Jeff Koons* by [Jeff Traub](https://designobserver.com/feature/art-rogers-vs-jeff-koons/6467/), believed to be fair use to illustrate a legal issue in scholarly discussion
 
-The artist [Jeff Koons]() used a photograph as a starting point to commission a sculpture. As Traub emphasizes, this "was not a case about two photographs, but about a sculpture and a notecard." Traub also contrasts the quality of the different works: A cheap postcard for trivial amusement on the one side, a highly crafted artwork with carefully selected materials displayed in a museum on the other side. The effect of the sculpture was presumably quite stunning on the observer. According to Traub, Koon's lawyer "strongly questioned whether a sculpture could *ever* be considered a copy of a photograph, so great was the transformation required in the change of medium".
+The artist [Jeff Koons]() used a photograph as a starting point to commission a sculpture. As Traub emphasizes, this "was not a case about two photographs, but about a sculpture and a [post]card." Traub also contrasts the quality of the different works: A cheap postcard for trivial amusement on the one side, a highly crafted artwork with carefully selected materials displayed in a museum on the other side. The effect of the sculpture was presumably quite stunning on the observer. According to Traub, Koon's lawyer "strongly questioned whether a sculpture could *ever* be considered a copy of a photograph, so great was the transformation required in the change of medium".
 
 Regardless, the court focused on the basic fact that the sculpture was a ['substantially similar'](https://en.wikipedia.org/wiki/Substantial_similarity) copy of the original work. Thus, changing the media from 2D to 3D did not avoid infringement.
 :::
 
 
 :::warning
-**what is a stamp?**
+**FreeCAD: modeling the heart logo in 3D**
+
+The original heart logo is under copyright protection. Adding a dimension in going to 3D creates a derivative work. This is a copyright infringement, we cannot hope to argue with fair use. If we had chosen a logo with a CC license without ND it would be perfectly allowed add a dimension.
+
+However, the CC trademark policy may allow us to create a 3D "sculpture" of the heart logo in our OER context. Boldly, we proceed...
+
+It is outside of the scope of the case study to describe the modeling details. I only want to give an impression of the basic idea. (Also, there are several techniques with different trade-offs that could be used.)
+
+> ![](https://i.imgur.com/WaVYUi6.png)  
+> *Heart shape in Sketcher workbench* by hmk, licensed under CC BY-SA 4.0
+
+We convert the 2 `Wire` objects that make up the heart shape into a [`Sketch`](https://wiki.freecadweb.org/Sketcher_Workbench). The sketch looks rather cluttered because the heart shape is composed of 22 [`BSpline`](https://wiki.freecadweb.org/Sketcher_CreateBSpline) segments. We do not have to manipulate the sketch (luckily), but we can admire the result.
+
+> ![](https://wiki.freecadweb.org/images/c/cc/PartDesign_Pad_example.svg =x150)  
+> [*PartDesign Pad example*](https://wiki.freecadweb.org/File:PartDesign_Pad_example.svg) by Normandc, licensed under BY SA 3.0
+
+> ![](https://i.imgur.com/2WwhFI9.png)  
+> *Padded heart shape in Part Design workbench* by hmk, licensed under CC BY-SA 4.0
+
+Note, that we have an inner and an outer outline. In between we have a planar surface (on the XY-plane). FreeCAD offers the [`Pad`](https://wiki.freecadweb.org/PartDesign_Pad/en) tool, which allows us to "pads up" the heart into a 3D volume (by pulling it along the Z-axis).
+
+> ![](https://i.imgur.com/rqvITLE.png)  
+> *3D heart logo with measurements* by hmk, licensed under CC BY-SA 4.0
+
+The "cc" shape is done analogously. A box-like shape has been created first, which supports both the heart and "cc" shape. We are done with the 3D modeling.
+
+The model is saved in FreeCAD's [native format](https://wiki.freecadweb.org/File_Format_FCStd#Change_the_source_of_the_file_.FCStd), which has `.FCStd` as suffix. It is important to make this file available, and to make it available under a CC license. Only the `.FCStd` file contains the high-level modeling steps, which allows other to load it into FreeCAD and to easily inspect and manipulate it. The file is available in the GitHub repository with a CC BY-SA license (corresponding to the file's license information; see above): https://github.com/hkienle/cc-course-final/blob/main/ccheart.FCStd
+:::
+
+
+:::warning
+**FreeCAD: from model to mesh**
+
+FreeCAD's native `.FCStd` file format preserves convenient analysis and modification. But it is understood by FreeCAD only.
+
+The STL format is widely understood. It is the lingua franca for 3D objects. It somewhat compares to PDF in this respect: Word and LibreOffice can produce PDF, and virtually all printers accept PDF. Similarly, virtually all 3D printing software (so-called slicers) accepts STL.
+
+To arrive at STL, we first create an in-memory representation of the STL, which is called a [triangle mesh](https://en.wikipedia.org/wiki/Triangle_mesh). In FreeCAD we only have to select the model (i.e., or CC heart logo) and apply the [create mesh operation](https://wiki.freecadweb.org/Mesh_FromPartShape) to it.
+
+> ![](https://i.imgur.com/MsEgIwV.png)  
+> *Meshed CC heart logo* by hmk
+
+
+
+The STL format preserves key properties of the 3D object, namely its shape. However, even this is not quite true. STL only approximates the shape with many small surfaces. If the resolution is fine-grained enough for our intended purpose, it will not matter. FreeCAD's default meshing works well for our needs. However, if 
+
 :::
 
 
@@ -280,33 +349,90 @@ Regardless, the court focused on the basic fact that the sculpture was a ['subst
 
 Does it make a fundamental difference if a work is fixated on a canvas (2D) or fixated with a sculpture (3D)? If it is a purely artistic work there is no fundamental difference -- copyright applies to both.
 
-![](https://i.imgur.com/W488GCl.png =x150)  
-[*Super Mario Brothers Polymer Clay Sculpture*](https://www.instructables.com/Super-Mario-Brothers-Polymer-Clay-Sculpture/) by poofrabbit, licensed under CC BY-NC-SA 4.0. Cropped from original.
+> ![](https://i.imgur.com/W488GCl.png =x150)  
+> [*Super Mario Brothers Polymer Clay Sculpture*](https://www.instructables.com/Super-Mario-Brothers-Polymer-Clay-Sculpture/) by poofrabbit, image licensed under CC BY-NC-SA 4.0. Cropped from original. Probably a copyright infringement of the original author, used here as example to illustrate a legal issue
 
-If you create a 3D sculpture of Super Mario, it as an artistic work that is automatically protected under copyright. (You also created a derivative work of a 2D original, thereby infringing on the original work's copyright.)
+If you create a 3D sculpture of Super Mario, it is an artistic work that is automatically protected under copyright. (You also created a derivative work of a 2D original, thereby infringing on the original work's copyright.)
 
 However, if a 3D object is a useful object (i.e., it is serving a purpose) then the object may be applicable for patent protection. Weinberg (2013) makes the point that "in a practical sense, **copyrights and patents are mutually exclusive**. If you have a useful article you cannot protect it with a copyright" (boldface added).
 
 As a consequence relatively few 3D objects in the physical are protected by IP because patenting an objects has several hurdles: the object must meet the criteria of non-obviousness, it must not have been patented before, and the patent must be applied for in a lengthy and costly process involving a lawyer. In contrast, if copyright applies to a work it is automatically granted with its fixation.
 :::
 
+
 :::success
 **copyright, utility patent, design patent**
 
 Nothing is ever clear cut. Let's say we have a vacuum cleaner. It clearly is a useful object that falls under patent law. Conversely, copyright law does not apply. The looks of the vacuum cleaner could be covered by a [design patent](https://en.wikipedia.org/wiki/Design_patent). If the vacuum cleaner is used as part of a sculpture, the result is a piece of art, which is not a useful object. The [sculpture is protected by copyright](https://copyright.uslegal.com/enumerated-categories-of-copyrightable-works/pictorial-graphic-and-sculptural-work/).
 
-This is not a hypothetic example, as the sculpture *New Shop-Vac Wet/Dry* shows. Its materials are an industrial vacuum cleaner, acrylic, and fluorescent lights.
+> ![](https://i.imgur.com/kXkojD9.png =x200)  
+> [*New Shop-Vac Wet/Dry*](http://www.jeffkoons.com/artwork/the-new/new-shop-vac-wetdry) by Jeff Koons, copyright Jeff Koons, believed to be fair use to illustrate a scholarly legal discussion
 
-![](https://i.imgur.com/kXkojD9.png =x200)  
-[*New Shop-Vac Wet/Dry*](http://www.jeffkoons.com/artwork/the-new/new-shop-vac-wetdry) by Jeff Koons, copyright Jeff Koons, believed to be fair use
+This is not a hypothetic example, as the sculpture *New Shop-Vac Wet/Dry* shows. Its materials are an industrial vacuum cleaner, acrylic, and fluorescent lights.
 :::
 
 
 
 
-
+:::warning
+**what is a stamp?**
 
 Copyright of a 3D shape (candlestick)
+:::
 
 
-Poor Technical Choices Make Open Content Less Open http://www.opencontent.org/definition/
+freecad documentation has CC license
+
+
+@@@ Poor Technical Choices Make Open Content Less Open http://www.opencontent.org/definition/
+
+
+## ordering the skeins
+
+> ![](https://i.imgur.com/Pcl7gSC.png)
+>
+> *Not exactly a unanimous decision by the Supreme Court involving an IP case: [Star Athletica LLC v. Varsity Brands](https://www.supremecourt.gov/opinions/16pdf/15-866_0971.pdf)*, screenshot from PDF, believed to be in the public domain in the US, otherwise believed to be fair use
+
+Let's try to organize key points succinctly.
+
+When dealing with artistic creations that are fixated in writing, on canvas, as recording, etc. then almost certainly the work is automatically protected under copyright. If the copyright has not expired and the work is in the public domain, the fair use doctrine applies, which permits limited use of the copyrighted work. 
+
+If the copyrighted work is claimed as a trademark then (1) you may use the work in a descriptive manner and/or (2) there may be a trademark policy that spells out how the work can be used.
+
+When moving away from artistic creations to real-world objects, the starting point should be to question whether copyright actually applies. If the object is useful (i.e., it is serving a purpose) then copyright does not apply, but the object may be protect*able* with a (utility) patent. Note that protect*able* does not mean that the object is necessarily protected by a patent.)
+
+As a general rule: If something is protected under copyright, it cannot be protected as patent; and vice versa. A chair is a useful object and if it embodies a novel invention then the chair can be patented. In other words, the product of an industrial design process is not copyright protected.
+
+Conversely, a chair is not protected under copyright! If we have an ordinary, boring chair no utility patent and no copyright can be claimed. A sculpture, in the sense of a 3D artwork, is copyrighted. If, accidentially, you could abuse it as a chair or bottle opener, it does not make it patentable.
+
+The copyright vs. utility patent rule breaks down for Janus-type objects that both (1) are useful and (2) have artistic elements. In such cases, the law tries to deconstruct the object into artistic elements and utilitarian functionality, and then applies copyright and patent law correspondingly (*conceptual severability test*). This approach works reasonably well if you image a chair with an artwork on its back rest, but often has high uncertainty. (Supreme court judges [disagreed](http://www.maw-law.com/copyright/r-p-conceptual-separability-test/) on a actual case.)
+
+
+Most copyrighted works that we are dealing with are 2D. Most -- actually: all? -- real-world objects we are dealing with are 3D. As we learned, for 3D objects copyrightability vs. patentability needs to be considered. At one extreme, a 3D object may have neither copyright nor patent protection, at the other extreme it may have both copyright-protected and patented features.
+
+For 3D objects (real or virtual) it is often the case that derived 2D works exist: For example, a 2D photograph is taken of a 3D sculpture. Or a blueprint is created from a 3D CAD model (FreeCAD supports this with the [Techdraw workbench](https://wiki.freecadweb.org/TechDraw_Workbench)).
+
+The other way around, 2D artwork can be applied to a 3D object: An photo can be printed on a T-shirt, a fabric design is applied to a [cheerleader uniform](https://en.wikipedia.org/wiki/Star_Athletica%2C_LLC_v._Varsity_Brands%2C_Inc.). Neither the cut of the T-shirt nor the cut of the uniform can be copyrighted, but the artwork is. This is especially clear if the artwork existed first in 2D, regardless whether in its final form of as a conceptual sketch from which the final work has been derived.
+
+
+
+
+- idea-expression dichotomy
+- transformational use doctrine
+- substantial similarity test
+- conceptual severability test
+
+
+## parting thoughts
+
+
+
+Copyright covers many domains: text, sound, images
+sui generis
+
+
+
+## appendix: troubleshooting
+
+> ![](https://i.imgur.com/ClYPreh.png)
+> Import from SVG causes self-intersecting wires
