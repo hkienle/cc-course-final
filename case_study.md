@@ -10,11 +10,23 @@ tags: cc, course-cc
 
 ![](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg =x40)  
 Except where otherwise noted, this document's content is licensed under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
-Please attribute this document to *hmk* (pseudonym) and link it with [https://hackmd.io/@hkienle/course-cc-final/](https://hackmd.io/@hkienle/course-cc-final/)
+Please attribute this document to Holger Kienle and link it with [https://hackmd.io/@hkienle/course-cc-final/](https://hackmd.io/@hkienle/course-cc-final/)
 
 For **screenshots** made by the author:
-- Making a screenshot is believed to be [fair use](https://psu.libanswers.com/faq/333836), thus not violating any copyright that may exist in the depicted GUI.
-- To remove doubt, if the screenshot depicts content by the author, it is licensed under CC BY-SA 4.0.
+- Making a screenshot is believed to be [fair use](https://psu.libanswers.com/faq/333836) (thus not violating any copyright that may exist in the depicted GUI).
+- To remove doubt, if the screenshot depicts content by the author, this content is licensed under CC BY-SA 4.0 and the entire screenshot is licensed CC BA-SA 4.0.
+
+**No endorsement by Creative Commons:** This case study has been performed in the *CC Certificate for Educators* course, but this does not mean in any sense that it is endorsement by or association with Creative Commons. This especially holds for the (ab)use of the CC heart logo.
+:::
+
+::: danger
+**caveat**
+
+I cannot give legal advice and I am not a lawyer anyways. What I can do is to make you aware of certain considerations about the intersection of intellectual property (IP), licenses, and technical artifacts. This case study is intended as a starting point to form your own opinions and conclusions.
+
+Whenever you read a sentence discussing legal issues, you should prepend it with: As you know, the author is not a lawyer and only gives his opinion as a lay person **for entertainment purposes only**. Also, the specifics of the law will vary depending on the country, even on the [regional circuit](https://system.uslegal.com/us-courts-of-appeals/circuits/) in the US.
+
+It this case study feels like a wild roller coaster, it is so because IP law is a wild roller coaster... Enjoy! :nerd_face:
 :::
 
 **CC Certificate for Educators - Fall 2022 - Final**
@@ -26,22 +38,34 @@ For **screenshots** made by the author:
 This case study looks at the workflow to produce a 3D artifact from its design to its physical instantiation with a 3D printer. The workflow produces several digital artifacts and in the end a physical artifact. The case study discusses intellectual property (IP) and licensing considerations for each artifact.
 
 > ![](https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.png =x120)  
-> *Starting point: CC heart logo* by Creative Commons, copyrighted, trademark policy applies, believed to be fair use as a subject of scholarly discussion
+> *Starting point: CC heart logo*  
+> [SVG image](https://creativecommons.org/about/downloads/) by Creative Commons, copyrighted, unlicensed, believed to be fair use as a subject of scholarly discussion.  
+> Assumed to be a trademark by Creative Commons.
 
 The starting point of the case study is the CC logo with a heart outline (2D).
 
-> @@@  
-> Result: stamp
+> ![](https://i.imgur.com/U8yyVLk.png =x120)  
+> Result: physical 3D object  
+> Photo by Holger Kienle
 
-At the end we will have produced a physical 3D object that can function as a "rubber stamp".
+At the end we will have produced a physical 3D object that can be used as a "badge" or function as a "rubber stamp".
 
+### GitHub repository
+
+All accompanying assets of this case study are available in the following GitHub repository: https://github.com/hkienle/cc-course-final
+
+The motivation for doing so is that all assets of the project should be available in a self-contained repository that can be easily downloaded or cloned by others.
+
+Since the repository is public with the intent to encourage remixing, it is important to license each file in the repository appropriately.
+
+@@@ license file
 
 ### open and free
 
 An important goal of the case study is to use [free and open-source software](https://en.wikipedia.org/wiki/Free_and_open-source_software) (FOSS) and to license all material with [free licenses](https://en.wikipedia.org/wiki/Free_license).
 
 The following table gives an overview of the used software tools.
-| FOSS | domain | license (SPDX) |
+| FOSS | domain | FOSS license (SPDX) |
 | -------- | -------- | -------- |
 | Inkscape | vector graphics editor | GPL-3.0-or-later |
 | FreeCAD | parametric 3D CAD modeler | LGPL-2.0-or-later |
@@ -53,26 +77,15 @@ An aspect easily overlooked is that software should operate on [open file format
 | -------- | -------- | -------- |
 | SVG     | vector images (2D) | [W3C Document License](http://www.w3.org/Consortium/Legal/copyright-documents) |
 | STL | triangulated surfaces (3D objects) | [openly documented, but proprietary](https://www.loc.gov/preservation/digital/formats/fdd/fdd000504.shtml) (?)|
-| markdown | documentation, many dialects | [CommonMark Spec](https://spec.commonmark.org/): CC BY-SA  |
+| g-code | machine control | openly documented, many variants
+| markdown | documentation | several dialects, e.g., [CommonMark](https://spec.commonmark.org/) under CC BY-SA  |
 | PNG | bitmap images (screenshots)| [W3C Software and Document Notice and License](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
 
-
-## meta
-
-::: danger
-**caveat**
-
-I cannot give legal advice and I am not a lawyer anyways. What I can do is to make you aware of certain considerations about the intersection of intellectual property (IP), licenses, and technical artifacts. It is a starting point to form your own opinions and conclusions.
-
-Whenever you read a sentence discussing legal issues, you should prepend it with: As you know, the author is not a lawyer and only gives his opinion as a lay person for entertainment purposes only. Also, the specifics of the law will vary depending on the country.
-
-It this case study feels like a wild roller coaster, it is so because IP law is a wild roller coaster... :nerd_face:
-:::
 
 :::success
 **green boxes**
 
-Writing in green boxes are used to explain legal or technical issues, which are relevant for the case study
+Writing in green boxes are used to discuss legal issues that are relevant for the case study.
 :::
 
 
@@ -80,6 +93,13 @@ Writing in green boxes are used to explain legal or technical issues, which are 
 **yellow boxes**
 
 Writing in yellow boxes describe an artifact used or produced for the case study.
+:::
+
+
+:::danger
+**red boxes**
+
+Writing in red boxes ties to succinctly describe the legal situation and licensing of the case study's artifacts.
 :::
 
 
@@ -96,102 +116,59 @@ The first step in our workflow is to analyze the logo with the help of Inkscape.
 **CC heart logo**
 
 > ![](https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.png =x120)  
-> [*CC heart logo*](https://creativecommons.org/about/downloads/) by Creative Commons, copyrighted, no copyright license. Should be considered a trademark by Creative Commons.
+> *The CC heart logo (SVG file)*  
+> [SVG image](https://creativecommons.org/about/downloads/) by Creative Commons, copyrighted, unlicensed, believed to be fair use as a subject of scholarly discussion.  
+> Assumed to be a trademark by Creative Commons.
 
-Our logo, in the following called *heart logo*, is an interesting case to consider:
-- It is (automatically) copyrighted and has no CC license.
-- It is a trademark and uses of it have to adhere to Creative Commons' trademark policy.
-- It is a 2D work that we want to extend to a 3D object.
-
-The hear logo has two graphical elements:
+Our starting point, in the following called *heart logo*, has two graphical elements:
 1. The heart shape, which forms the logo's outline.
 2. The letters "cc", which are rendered in a specific font (CC Accidenz Commons).
 
-The heart outline may be considered a *basic shape* -- part of the [suits of playing cards](https://en.wikipedia.org/wiki/Playing_card_suit), originating more than 500 years ago --, which is not protected by copyright. (As a side note, it's fascinating that a heart shape can be defined with a mathematical function.)
+The heart outline may be considered a *basic shape* -- part of the [suits of playing cards](https://en.wikipedia.org/wiki/Playing_card_suit), originating more than 500 years ago --, which is not protected by copyright.
 
 > ![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Heart_plot.svg =x150)  
-> *Plot of a mathematical function that yields a heart symbol* by [Eviatar Bach](https://commons.wikimedia.org/wiki/File:Heart_plot.svg), placed in the public domain with CC Zero
+> *Plot of a mathematical function that yields a heart symbol*  
+> Screenshot by [Eviatar Bach](https://commons.wikimedia.org/wiki/File:Heart_plot.svg), placed in the public domain with CC Zero
 
-The letter "c" itself is not under copyright and the particular shape of the "c" may be also not under copyright. The encoding of the "c" in the font file of CC Accidenz Commons may be under copyright (and this file is licensed with CC BY-SA 4.0).
+(As a side note, it's fascinating that a heart shape can be defined with a mathematical function.)
 
-Regardless whether the individual graphical elements (heart and "c") have copyright protections or not, the unique composition of the shapes that make up the heart logo result in copyright protection!
-
-Independently of the logo's copyright status, the heart logo is (indirectly) claimed as a trademark of Creative Commons:
-> Our registered trademarks and other trademarks include [...] CC (including the **CC in a circle logo** (the “CC Logo”) and CC standing alone) [...]  
-> (boldface added)
-
-The heart logo has not been registered, but the more common CC logo with a circle is.
+The letter "c" itself is not under copyright and the particular shape of the "c" may be also not under copyright.
 :::
 
 
 :::success
 **copyright and basic shapes**
 
-There is no copyright of ideas. There is no copyright of basic (abstract) shapes. (Before you get the idea that copyright might be sane after all: perhaps [4 minutes and 33 seconds of silence](https://ipkitten.blogspot.com/2012/04/price-of-silence-and-myth-of-batt-cage.html) may be copyrighted.)
+There is no copyright of ideas (*idea-expression dichotomy*). There is no copyright of basic (abstract) shapes.
+Generally, a work ["must have a minimum amount of creativity" to be under copyright](https://copyright.uslegal.com/enumerated-categories-of-copyrightable-works/creativity-requirement/).
 
-According to [Kattwinkel](https://www.owe.com/resources/legalities/legalities-15-is-a-shape-copyrightable-how-to-get-appropriate-rights-when-you-commission-graphic-design/), "no one can own exclusive copyright in a square, circle, oval, or diamond, or the common fleur de lis. Such shapes can be included as part of a more complex design, that as a whole is copyrighted". Generally, a work ["must have a minimum amount of creativity" to be under copyright](https://copyright.uslegal.com/enumerated-categories-of-copyrightable-works/creativity-requirement/).
+(Before you get the idea that copyright might be sane after all: [4 minutes and 33 seconds of silence](https://ipkitten.blogspot.com/2012/04/price-of-silence-and-myth-of-batt-cage.html) may be under copyright protection.)
+
+According to [Kattwinkel](https://www.owe.com/resources/legalities/legalities-15-is-a-shape-copyrightable-how-to-get-appropriate-rights-when-you-commission-graphic-design/), "no one can own exclusive copyright in a square, circle, oval, or diamond, or the common fleur de lis. Such shapes can be included as part of a more complex design, that as a whole is copyrighted".
 
 While a simple rectangle and the abstract idea of a rectangle are not protected by copyright, depicting a rectangle in a distinctive and creative way probably yields copyright protection (e.g., the use of color-gradients and shadows may accomplish this). Generally, in copyright law ["the amount of creativity required is very little"](https://copyright.uslegal.com/enumerated-categories-of-copyrightable-works/creativity-requirement/).
-
-> ![](https://i.imgur.com/bcVA6nb.png =x100)  
-> *A yellow rectangle on black background*, copied and cropped from somewhere on the Internet, considered fair use. Note that this has nothing to do with the National Geographic logo, any similarity would constitute a coincidence.
-
-A simple rectangle cannot be copyrighted, but a particular rectangle may be protected under trademark law (e.g., [National Geographic](https://help.nationalgeographic.com/s/article/logo-use-and-trademark)).
 :::
 
 
 :::success
-**trademarks-copyright interaction**
+**trademark-copyright interaction**
 
-A logo can enjoy both copyright and trademark protection. Copyright applies automatically, whereas the trademark protection has be claimed (e.g., by applying "TM") and defended (e.g., with  having a track-record of using the mark and sending cease-and-desist letters).
+The governing principle of trademark law is to prevent [likelihood of confusion](https://www.uspto.gov/trademarks/search/likelihood-confusion) by consumers. For logos, this means that if a logo has been claimed as a trademark by someone then someone else must not use this logo or a similar logo for their own (commercial) purpose.
 
-Optionally, a trademark can be registered with the US Patent and Trademark Office. It is then recorded in a database and it can be marked with :registered:. The CC logo is an example of a registered trademark.
+The trademark of a logo and the copyright status of a logo exist independently of each other. Especially, [a trademark does not necessarily have copyright protection](https://www.schoenherr.eu/content/have-you-ever-wondered-whether-your-brand-is-a-copyright-protected-work/).
 
-> ![](https://i.imgur.com/g3Un7Q0.png =x300)  
-> Screenshot of [TESS](https://www.uspto.gov/trademarks/search/using-trademark-electronic-search-system) record, believed to be in the public domain in the US because "most government-produced materials appearing on this website are not subject to copyright restrictions within the United States"; screenshot by hmk
+> ![](https://i.imgur.com/bcVA6nb.png =x100)  
+> *A yellow rectangle on black background*  
+> Copied and cropped from somewhere on the Internet, considered legal because basic shapes are not copyright protected.  
+> Note that this has nothing to do with the National Geographic logo, any similarity would constitute a coincidence.
 
-A trademark can have a *trademark policy* that governs the use of the trademark. A trademark policy is necessary if the trademark owner wants to allow third-parties to use it under certain conditions. [Creative Commons has a trademark policy](https://creativecommons.org/policies) for its CC logos, buttons, license elements, etc.
+For example, a simple rectangle cannot be copyrighted, but a particular rectangle may be protected under trademark law (e.g., the [National Geographic](https://help.nationalgeographic.com/s/article/logo-use-and-trademark)) logo.
 
-The artworks are covered by the CC trademark policy are (automatically) copyrighted. However, they do not have a CC license because ["applying a CC license to your trademarks and logos could even result in a loss of your trademark rights altogether"](https://creativecommons.org/faq/#could-i-use-a-cc-license-to-share-my-logo-or-trademark)! (Conversely, [Wikimedia has licensed its logos](https://diff.wikimedia.org/2014/10/24/wikimedia-logos-have-been-freed/) under CC BY-SA 3.0 even though they are trademarks and come with a trademark policy.)
-:::
+However, typically we can assume that a trademarked logo also enjoys copyright protection. Copyright applies automatically, whereas the trademark protection has be claimed (e.g., by applying "TM") and defended (e.g., with  having a track-record of using the mark and sending cease-and-desist letters).
 
+Optionally, a trademark can be registered with the US Patent and Trademark Office. It is then recorded in a database (TESS) and it can be marked with ":registered:".
 
-:::warning
-**SVG encoding of the CC heart logo**
-
-The CC heart logo can be [downloaded as a ZIP file](https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip) from the CC web site. For convenience the [unzipped file has been committed to the case study's repository](https://github.com/hkienle/cc-course-final/commit/b49752fe7ddf617c2a781febcd6d103ebc459c93). The motivation for doing this is that all assets of the project should be available in a self-contained repository. This copy of the logo is a violation of copyright! A possible defense is that the logo is used as part of OER to teach about copyright and CC licenses -- and this use may be allowed by CC's trademark policy.
-
-The SVG encoding is a text-based (not binary) and one can look at its [raw content in the repository](https://github.com/hkienle/cc-course-final/blob/main/ccheart_black.svg?short_path=637e186). The SVG file is actually quite short!
-
-Here is an excerpt from the file (reformatted):
-```
-<path d="
-
-  ## draw first "c"
- 
-  M 22983.64 21630.19  # move to coordinates (absolute)
-  l -2928.01 -1451.38  # draw straight line (relative)
-  c -1017.73,1483.99 -1758.21,2488.33 -3897.08,1902.25 -1678.91,-460.05 -2175.85,-2300.18 -2239.67,-3843.76 -87.17,-2108.39 649.94,-4543.46 3168.15,-4413.24 1609.13,83.19 2294.75,1032.23 2661.15,1885.36  # draw cubic curve (relative)
-  l 3196.99 -1638.9
-  c -1574.75,-3004.31 -5265.13,-4026.05 -8393.32,-3188.81 -3328.66,890.9 -5014.61,3952.95 -4955.5,7255.23 60.43,3375.58 1680.8,6291.51 5161.55,7052.54 1697.16,371.06 3545.13,284.81 5116.74,-503.18 1216.27,-609.83 2567.56,-1786.86 3109,-3056.12
-  z  # close path
-
-  ## draw second "c"
-  ...
-  "/>
-```
-A SVG file specifies drawing instructions along with coordinates. You can move to a coordinate (`m`), draw a line to a coordinate (`l`) and specify [cubic Bézier curves](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths#curve_commands) (`c`). SVG is a [declarative language](https://anvaka.github.io/sj/compare/) that directly specifies "what" rather than requiring to program the "how".
-
-Perhaps amazingly, what you see in the SVG excerpt is the first letter "c" in the heart logo. If you look closely, the "c" has 2 straight lines and 2 curvy parts -- and this is reflected in the SVG with 2 line commands (`l`) and 2 Bézier commands (`c`).
-
-> ![](https://i.imgur.com/cUa6hpG.png =x300)  
-> *Screenshot of "c"* in CodePen by hmk
-
-I [uploaded the SVG excerpt to CodePen](https://codepen.io/anon42/pen/GRGBzoJ?editors=1000), which allows live-rendering and editing the "c" letter.
-
-It is an interesting question whether a declarative specification, such as SVG commands, qualifies as source code, which would be automatically protected by copyright. The copyright cannot extend to the shape of the letter "c", but it may cover the (exact) content of the SVG file. In other words, the general idea or the [algorithm of drawing a "c" with SVG commands cannot be copyrighted](https://law.stackexchange.com/questions/4097/does-copyrighted-code-protect-intellectual-property-rights-on-novel-algorithms-i). But a particular specification of drawing a "c" may well be.
-
-As a side note, it would be possible to create a new SVG file with slightly changed coordinates. (This could be also accomplished with "reverse engineering" the shape by drawing it from scratch.) The result would look the same to the human eye, but would obfuscate that the new SVG is an excerpt from Creative Commons' SVG file.
+A trademark can have a *trademark policy* that governs the use of the trademark. A trademark policy is necessary if the trademark owner wants to allow third-parties to use it under certain conditions.
 :::
 
 
@@ -208,17 +185,122 @@ It seems that fonts is an area of copyright law that can differ significantly on
 
 As a concrete example, the [CC Accidenz Commons](https://creativecommons.org/2019/10/28/accidenz-commons-open-licensed-font/) font is under a CC BY-SA 4.0 license. In the US, this license does not apply to the glyphs' shapes themselves because they are not covered by copyright.
 
-If anything, the CC license applies to the font file, which encodes the glyphs in a high-level declarative specification language. According to [Goldman](https://ipandmedialaw.fkks.com/post/102giuw/battle-lines-drawn-over-font-copyright-protection) (2020) the US Copyright Office may now have the position that the declarative specification used in font files it not protected by copyright!
+If anything, the CC license applies to the font file, which encodes the glyphs in a high-level declarative specification language. According to [Goldman (2020)](https://ipandmedialaw.fkks.com/post/102giuw/battle-lines-drawn-over-font-copyright-protection) the US Copyright Office may now have the position that the declarative specification used in font files it not protected by copyright!
+:::
+
+
+:::danger
+**CC heart logo**
+
+If I had designed my own logo as a starting point for this case study, the IP analysis would be much easier. I would own the copyright in logo. Or the logo would not qualify for copyright protection all, which is rather unlikely if the logo would show a minimal creative spark. Also, the logo would no be (also) a trademark. Since I would be logo's copyright holder, I could create derivative works and I could license the logo any way I wished for.
+
+However, now I have to deal with the repercussions of using someone else's work.
+
+Is the CC heart logo protected by copyright? Regardless whether the individual graphical elements (heart and "c") have copyright protections or not, the [unique composition of the shapes](https://www.commarts.com/columns/is-it-true-that-copyright-doesn-t-protect-graphic-design) (i.e., a *collection* !?) that make up the heart logo result in copyright protection.
+
+Perhaps the encoding of the "c" in the font file of CC Accidenz Commons is under copyright. CC seem to think so, because the font file is licensed with CC BY-SA 4.0. If the font file enoyed copyright protection, it may be still legal to redraw the "c" from scratch. (In this case, it would be a good idea to document how the letter was *reverse engineered* without copying from the font file in case there are legal proceedings.)
+
+Is the CC heart logo a trademark? I could not find a definite answer. [Creative Commons has a trademark policy](https://creativecommons.org/policies#trademark) and claims various trademarks (which is independent of the trademark's copyright status):
+> "Our registered trademarks and other trademarks include [...] CC (including the **CC in a circle logo (the “CC Logo”)** and CC standing alone) [...]"  
+> (boldface added)  
+
+The classic CC logo, referred to as "CC Logo", is explicitly claimed.
+
+> ![](https://i.imgur.com/g3Un7Q0.png =x300)  
+> Screenshot of [TESS](https://www.uspto.gov/trademarks/search/using-trademark-electronic-search-system) record of CC Logo  
+> Screenshot by Holger Kienle,
+> believed to be in the public domain in the US because it is a government web site and database, otherwise believed to be fair use
+
+Moreover, the CC Logo is a *registered trademark* and recorded in the TESS database. In contrast, the CC heart logo is not recorded in the database and it is also not explicitly claimed in the trademark policy.
+However, since a "consumer"/user who is familiar with the CC Logo, will also associate the CC heart logo with Creative Commons, we should assume that the CC heart logo is (indirectly) covered by the trademark policy!
+
+Interestingly, even though the CC logo are copyright protected, they do not come with a CC license -- this is unfortunate for our use case because it would reduce legal uncertainty.
+
+Creative Commons' rationale for not providing a CC license is that ["applying a CC license to your trademarks and logos could even result in a loss of your trademark rights altogether"](https://creativecommons.org/faq/#could-i-use-a-cc-license-to-share-my-logo-or-trademark).
+
+Not everybody seem to share this rationale though: [Wikimedia has licensed its logos](https://diff.wikimedia.org/2014/10/24/wikimedia-logos-have-been-freed/) under CC BY-SA 3.0 even though they are trademarks and come with a trademark policy.
+
+I can use the CC heart logo, if I am in compliance with the trademark policy. Most appliable to my use case, the policy states:
+> "Descriptive uses: For the avoidance of doubt, you do not need our permission [...] for **descriptive use** (e.g., to describe CC licensing in explanatory materials), provided that such use does not imply endorsement by or association with Creative Commons.
+
+Since it can do no harm and demonstrates good intentions, I have added a notice that this case study is not associated with Creative Commons.
+
+For the CC hear logo, I operate on the following facts/assumptions:
+- It is (automatically) copyrighted and has no CC license.
+- It is a trademark and uses of it have to adhere to Creative Commons' trademark policy.
+- The trademark policy "overrides" the copyright, because otherwise using/copying the logo would result in a copyright infringement punishable by law.
+- My use of the CC heart logo is too far removed from the provisions of the trademark policy. As a result, without explicit consent from Creative Commons for my use I am in violation of the policy and infringing on copyright because I am copying and even make derivative works of the CC hear logo.
+- I foolheartishly proceed with the case study...
+:::
+
+:::warning
+**SVG encoding of the CC heart logo**
+
+The CC heart logo can be [downloaded as a ZIP file](https://creativecommons.org/wp-content/uploads/2019/02/ccheart_black.svg_.zip) from the CC web site. The SVG encoding is text-based (not binary) and one can look at its [raw content](https://github.com/hkienle/cc-course-final/blob/main/ccheart_black.svg?short_path=637e186) with a text editor. The SVG file is surprisingly short, consisting of only 21 lines!
+
+Here is an excerpt from the file (reformatted, comments start with `#`):
+```
+<path d="
+
+  # draw first "c"
+ 
+  M 22983.64 21630.19  # move to coordinates (absolute)
+  l -2928.01 -1451.38  # draw straight line (relative)
+  c -1017.73,1483.99 -1758.21,2488.33 -3897.08,1902.25 -1678.91,-460.05 -2175.85,-2300.18 -2239.67,-3843.76 -87.17,-2108.39 649.94,-4543.46 3168.15,-4413.24 1609.13,83.19 2294.75,1032.23 2661.15,1885.36  # draw cubic curve (relative)
+  l 3196.99 -1638.9
+  c -1574.75,-3004.31 -5265.13,-4026.05 -8393.32,-3188.81 -3328.66,890.9 -5014.61,3952.95 -4955.5,7255.23 60.43,3375.58 1680.8,6291.51 5161.55,7052.54 1697.16,371.06 3545.13,284.81 5116.74,-503.18 1216.27,-609.83 2567.56,-1786.86 3109,-3056.12
+  z  # close path
+
+  # draw second "c"
+  ...
+  "/>
+```
+A SVG file specifies drawing instructions along with coordinates. SVG is a [declarative language](https://anvaka.github.io/sj/compare/) that directly specifies "what" rather than requiring to program the "how". You can move to a coordinate (`m`), draw a line to a coordinate (`l`) and specify [cubic Bézier curves](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths#curve_commands) (`c`). 
+
+Perhaps amazingly, what you see in the above SVG excerpt is the first letter "c" in the heart logo. If you look closely, the "c" has 2 straight lines and 2 curvy parts -- and this is reflected in the SVG with 2 line commands (`l`) and 2 Bézier commands (`c`).
+
+> ![](https://i.imgur.com/cUa6hpG.png =x300)  
+> *Screenshot of "c"* in CodePen by hmk
+
+I [uploaded the SVG excerpt to CodePen](https://codepen.io/anon42/pen/GRGBzoJ?editors=1000), which allows live-rendering and editing of the "c" letter.
+
+As a side note, it would be possible to create a new SVG file with slightly changed coordinates. (This could be accomplished with "reverse engineering" the shapes by drawing them from scratch.) The result would look the same to the human eye, but the new SVG would not be the result of copying from the original file.
+:::
+
+
+:::danger
+**SVG file of CC heart logo**
+
+Is the logo's SVG file copyright protected? Strictly speaking, we can distinguish between the copyright in the logo as such and the copyright of the logo's SVG encoding. [Weinberg (2015)](https://publicknowledge.org/wp-content/uploads/2021/11/3_Steps_for_Licensing_Your_3D_Printed_Stuff.pdf) discusses this distinction with the example "between a digital photograph and a file that
+contains a digital photograph" and says:
+> in that case copyright can be thought of as **protecting the entire bundle**, which means that the distinction is not particularly meaningful. In large part, this is because the photograph itself is well within the scope of copyright protection.  
+> (boldface added)
+
+Thus, it makes sense to assume that both the heart logo and the corresponding file are copyright protected.
+
+For convenience the [unzipped heart logo file has been committed to the case study's repository](https://github.com/hkienle/cc-course-final/commit/b49752fe7ddf617c2a781febcd6d103ebc459c93). Since the logo is copyrighted, this may be copyright infringement! Since the repository that contains the file is meant as OER to teach about copyright and CC licenses, the trademark policy may cover this use. However, the file in the repository is not a use of the logo per se. The copy is not strictly necessary to accomplish the OER.
+
+
+I also uploaded a reformatted and annotated copy -- this may qualify as a derivative work -- of the SVG encoding of the letter "c" to the [repository](https://github.com/hkienle/cc-course-final/blob/main/ccheart_black-first_c.svg) and to [CodePen](https://codepen.io/anon42/pen/GRGBzoJ?editors=1000). Here, the answer seems less clear whether this constitutes a copyright infringement.
+
+Interestingly, the font file of the letter "c" is under CC BY-SA 4.0. With Weinberg's "bundle" theory this may also mean that the shape of the "c" is licensed as such, independent of its encoding.
+
+One other way to look at it is that we are dealing with a typeface's glyph, which is not necessarily protected by copyright (e.g., this is the case in the US). A declarative specification of the glyph is also not necessarily protected (e.g., this may be the case in the US). The SVG encoding of the "c" happens to be such a declarative specification!
+
+@@@ licensing of "c": CC BY-SA 4.0 or none
 :::
 
 
 :::warning
 **FreeCAD excursion: reverse engineering of shapes**
 
-You can start with a 2D shape (say the letter of a font) and recreate its shape. Technically, this is not copying, but reverse engineering. Generally speaking, reverse engineering is a well establish technique in engineering and it is legal. Recreating the letter of a font may be legal too.
+You can start with a 2D shape (say the glyph of a typeface) and recreate its shape. Technically, this is not copying, but reverse engineering. Generally speaking, reverse engineering is a well establish technique in engineering and it is legal. Recreating the letter of a font may be legal too.
 
 > ![](https://i.imgur.com/LiK0Rqw.png)  
-> *Tracing the outline of a handle in FreeCAD*. [FreeCAD for Makers](https://hackspace.raspberrypi.com/books/freecad), Jo Hinchliffe, HackSpace, September 2022. Licensed with CC BY-NC-SA 3.0. [PDF download](https://hackspace.raspberrypi.com/downloads/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBazhkIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5cc6d95c1be694fba3150e7c3f8f7245b090f203/HS_FreeCAD_Bookazine.pdf). Cropped from original
+> *Tracing the outline of a handle in FreeCAD*.  
+> Image by Jo Hinchliffe in [FreeCAD for Makers](https://hackspace.raspberrypi.com/books/freecad), HackSpace, September 2022. Licensed with CC BY-NC-SA 3.0.  
+> Cropped from original  
+> [PDF download](https://hackspace.raspberrypi.com/downloads/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBazhkIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5cc6d95c1be694fba3150e7c3f8f7245b090f203/HS_FreeCAD_Bookazine.pdf). 
 
 FreeCAD can be used to recreate shapes approximately. For example, you can take a 2D picture of a 3D object and load the picture into FreeCAD. You can then trace the outline in FreeCAD to obtain a geometric encoding of the shape.
 :::
@@ -330,17 +412,27 @@ The model is saved in FreeCAD's [native format](https://wiki.freecadweb.org/File
 
 FreeCAD's native `.FCStd` file format preserves convenient analysis and modification. But it is understood by FreeCAD only.
 
-The STL format is widely understood. It is the lingua franca for 3D objects. It somewhat compares to PDF in this respect: Word and LibreOffice can produce PDF, and virtually all printers accept PDF. Similarly, virtually all 3D printing software (so-called slicers) accepts STL.
+The STL format is widely understood. It is the *lingua franca* for 3D objects. It somewhat compares to PDF in this respect: Word and LibreOffice can produce PDF, and virtually all printers accept PDF. Similarly, virtually all 3D printing software (so-called *slicers*) accepts STL.
 
-To arrive at STL, we first create an in-memory representation of the STL, which is called a [triangle mesh](https://en.wikipedia.org/wiki/Triangle_mesh). In FreeCAD we only have to select the model (i.e., or CC heart logo) and apply the [create mesh operation](https://wiki.freecadweb.org/Mesh_FromPartShape) to it.
-
-> ![](https://i.imgur.com/MsEgIwV.png)  
+> ![](https://i.imgur.com/dveuoZB.png)  
 > *Meshed CC heart logo* by hmk
 
+To arrive at an STL file, we first create an in-memory representation, which is called a [triangle mesh](https://en.wikipedia.org/wiki/Triangle_mesh). In FreeCAD we only have to select the model (i.e., or CC heart logo) and apply the [create mesh operation](https://wiki.freecadweb.org/Mesh_FromPartShape) to it.
 
+The STL format preserves key properties of the 3D object, namely its shape. However, even this is not quite true. STL only approximates the shape with many small planar surfaces. In effect, curves are approximated by straight lines.
 
-The STL format preserves key properties of the 3D object, namely its shape. However, even this is not quite true. STL only approximates the shape with many small surfaces. If the resolution is fine-grained enough for our intended purpose, it will not matter. FreeCAD's default meshing works well for our needs. However, if 
+> ![](https://i.imgur.com/6So4FhU.png =x200) Crude meshing  
+> 
+> ![](https://i.imgur.com/6vVRg0F.png =x200) Fine meshing
+>
+> *Different meshing algorithms and settings result in cruder or finer meshings* by hmk
 
+If the mesh's resolution is fine-grained enough for our intended purpose, the mesh's approximation will not matter. FreeCAD's default meshing works well for our needs. 
+
+> ![](https://i.imgur.com/HKQG1d4.png)
+> [Lion](https://www.thingiverse.com/thing:728085) by 3DWP, licensed under CC BY-SA 3.0. Screenshot of 3D model by hmk
+
+However, if the mesh's resolution is too course it can affect the 3D-printed object. A mesh-effect can be used on purpose as artistic effect.
 :::
 
 
@@ -357,6 +449,83 @@ If you create a 3D sculpture of Super Mario, it is an artistic work that is auto
 However, if a 3D object is a useful object (i.e., it is serving a purpose) then the object may be applicable for patent protection. Weinberg (2013) makes the point that "in a practical sense, **copyrights and patents are mutually exclusive**. If you have a useful article you cannot protect it with a copyright" (boldface added).
 
 As a consequence relatively few 3D objects in the physical are protected by IP because patenting an objects has several hurdles: the object must meet the criteria of non-obviousness, it must not have been patented before, and the patent must be applied for in a lengthy and costly process involving a lawyer. In contrast, if copyright applies to a work it is automatically granted with its fixation.
+:::
+
+
+:::warning
+**FreeCAD: exporting mesh to STL**
+
+In FreeCAD, a mesh object can be exported with `File > Export`. STL files typically have the suffix `.stl`. If you use `.stl` then FreeCAD will produce a binary STL file, with `.ast` you will get a textual (ASCII) STL.
+
+You can inspect a textual STL. It consists of geometric information (coordinates) that are impossible to process by (ordinary) humans.
+
+Here is the start of our STL file, which has 6135 lines in total:
+```
+solid Mesh
+  facet normal -0.000000 -1.000000 0.000000
+    outer loop
+      vertex 47.730000 0.000000 0.000000
+      vertex 0.000000 0.000000 0.000000
+      vertex 0.000000 0.000000 -4.000000
+    endloop
+  endfacet
+  facet normal 0.000000 -1.000000 -0.000000
+    outer loop
+      vertex 47.730000 0.000000 0.000000
+      [...]
+```
+
+You can add comments to a textual STL by starting them with a semicolon (`;`). This allows us to add licensing information:
+```
+; Copyright Holger Kienle
+; This work is licensed under CC BY-SA 4.0.
+; To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+solid Mesh
+  facet normal -0.000000 -1.000000 0.000000
+      [...]
+```
+:::
+
+
+:::warning
+**PrusaSlicer: from STL to g-code**
+
+We are close to a physical print. PrusaSlicer is one of many FOSS slicers for 3D printers.
+
+> ![](https://i.imgur.com/6ll3LDI.png)
+> *CC heart logo imported to PrusaSlicer* by hmk.
+
+With PrusaSlicer we can import our STL file. After the import, we see a rendering of the object on the virtual build plate.
+
+It looks not much different to what we see with FreeCAD. But in contrast to FreeCAD, PrusaSlicer only allows rudimentary modification of the object such as scaling. (It is a bit like having a document in LibreOffice versus PDF Reader.)
+
+Furthermore, PrusaSlicer allows us to control how the object will be printed. There are actually many considerations and trade-offs, ranging from the print material, over the infill-pattern and wall strength to the print speed and quality.
+
+> ![](https://i.imgur.com/92mtXlL.png)
+> *Preview shows first print layer of the heart and "cc" shapes* by hmk
+
+> ![](https://i.imgur.com/a1qyyET.png)
+> *Detail of first layer of "c"* by hmk
+
+One key feature of PrusaSlicer is to simulate the print-run, layer by layer. PrusaSlicer also estimates  the print time and how much material (filament) will be consumed. With the default settings, the heart logo prints in 33 minutes.
+
+> ![](https://i.imgur.com/xXAJwPB.png)
+> *Left shows instructions for moving the print head* by hmk
+
+The instructions that control the functioning of the printer are called g-code. One line of g-code only produces a tiny piece of the object: To print the outline of the "c" about 60 lines of g-code are needed. For our printout, the printer will do 2 outlines of the "c" shape (for more wall thickness and better strength). And it will do this for 10 layers such that the logo has some height.
+
+Importantly, the generated g-code is for a specific 3D printer model. (It is like assembly code, which has to match the CPU.) Typically, you need the STL file and slicing software to generate g-code for your own 3D printer.
+
+Usually, only the STL is published. But there is no harm in publishing the g-code for people that happen to have the same 3D printer model than you. This saves them the trouble of generating the g-code themselves (as long as they are happy with the settings that you used to produce the g-code).
+
+While the STL of a 3D model can still be manipulated to some degree, g-code is usually just executed as-is.
+
+The g-code file uses `;` for comments, just as STL. We can open the g-code in a text editor and add copyright and license information:
+```
+; Copyright Holger Kienle
+; Licensed under GNU General Public License v3.0 or later (SPDX: GPL-3.0-or-later)
+; To view a copy of this license, visit https://www.gnu.org/licenses/gpl-3.0-standalone.html
+[...g-code...]
 :::
 
 
@@ -383,6 +552,7 @@ Copyright of a 3D shape (candlestick)
 
 freecad documentation has CC license
 
+https://www.gnu.org/licenses/identify-licenses-clearly.html
 
 @@@ Poor Technical Choices Make Open Content Less Open http://www.opencontent.org/definition/
 
@@ -430,6 +600,8 @@ The other way around, 2D artwork can be applied to a 3D object: An photo can be 
 Copyright covers many domains: text, sound, images
 sui generis
 
+
+It is an interesting question whether a declarative specification, such as SVG commands, qualifies as source code, which would be automatically protected by copyright. The copyright cannot extend to the shape of the letter "c", but it may cover the (exact) content of the SVG file. In other words, the general idea or the [algorithm of drawing a "c" with SVG commands cannot be copyrighted](https://law.stackexchange.com/questions/4097/does-copyrighted-code-protect-intellectual-property-rights-on-novel-algorithms-i). But a particular specification of drawing a "c" may well be.
 
 
 ## appendix: troubleshooting
