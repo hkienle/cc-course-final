@@ -1,3 +1,3 @@
-This case study has been performed in the *CC Certificate for Educators* course, but this does not mean in any sense that it is endorsement by or association with Creative Commons. This especially holds for the (ab)use of the CC hear logo.
+This case study has been performed in the *CC Certificate for Educators* course, but this does not mean in any sense that it is endorsement by or association with Creative Commons. This especially holds for the (ab)use of the CC heart logo.
 
-Note that material in this repository may be subject to trademark polices or other rights that are not governed by the licenses. This especially hold for the Creative Commons logos, which are copyrighted and trademarked.
+Note that material in this repository may be subject to trademark polices or other rights that are not governed by the licenses. This especially holds for the Creative Commons logos, which are copyrighted and trademarked.
