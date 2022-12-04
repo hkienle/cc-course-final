@@ -21,3 +21,4 @@ Copyright and licensing information for the files in the **root directory** of t
 For the images in the **`screenshot` directory** of this repository:
 - Except otherwise noted, copyright by Holger Kienle, licensed under CC BY-SA 4.0. If the *CC heart logo* is depicted in the screenshot, note that the logo is copyright and trademark by Creative Commons.
 - `freecad-project_information.png`: CC Zero. To the extent possible under law, Holger Kienle has waived all copyright and related or neighboring rights in this file. This work is published from: Germany.
+- `thingiverse-lion.png`: 3D object [Lion](https://www.thingiverse.com/thing:728085) by 3DWP, licensed under CC BY-SA 3.0
