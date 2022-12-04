@@ -58,7 +58,7 @@ The motivation for doing so is that all assets of the project should be availabl
 
 Since the repository is public with the intent to encourage remixing, it is important to license each file in the repository appropriately.
 
-@@@ license file
+The **copyright and licensing information** for each relevant file is given in the repository's `README.md`: https://github.com/hkienle/cc-course-final/blob/main/README.md
 
 ### open and free
 
@@ -71,6 +71,7 @@ The following table gives an overview of the used software tools.
 | FreeCAD | parametric 3D CAD modeler | LGPL-2.0-or-later |
 | PrusaSlicer | 3D printer slicer | AGPL-3.0 |
 
+For FOSS, not only the software, but typically the documentation is under a free license. For example, [FreeCAD is documented with a Wiki](https://wiki.freecadweb.org/) and the content is licensed under CC BY 3.0. This is very helpful when creating OER.
 
 An aspect easily overlooked is that software should operate on [open file formats](https://en.wikipedia.org/wiki/Open_file_format), which are  defined by an openly published specification. Conversely, it is desirable to avoid [proprietary formats](https://en.wikipedia.org/wiki/Proprietary_file_format). This case study uses:
 | format | domain | specification license |
@@ -81,6 +82,7 @@ An aspect easily overlooked is that software should operate on [open file format
 | markdown | documentation | several dialects, e.g., [CommonMark](https://spec.commonmark.org/) under CC BY-SA  |
 | PNG | bitmap images (screenshots)| [W3C Software and Document Notice and License](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document)
 
+Last but not least, the 3D printer that has been used is a Prusa MINI. It it is open source hardware (OSH) and documentation is available at its [GitHub repository](https://github.com/prusa3d/Original-Prusa-MINI). OSHWA has certified it with [UID CZ000002](https://certification.oshwa.org/cz000002.html).
 
 :::success
 **green boxes**
@@ -107,7 +109,7 @@ Writing in red boxes ties to succinctly describe the legal situation and licensi
 
 We split the discussion into two parts, somewhat arbitrarily: We start with 2D, and then move on to 3D.
 
-### 2D
+### 2D (SVG)
 
 The first step in our workflow is to analyze the logo with the help of Inkscape. The logo is 2D and described with Scalable Vector Graphics (SVG). Inkscape can process SVG and its native file format is [SVG enhanced with Inkscape-specific meta data](https://inkscapetutorial.org/svg-file-format.html).
 
@@ -260,7 +262,8 @@ A SVG file specifies drawing instructions along with coordinates. SVG is a [decl
 Perhaps amazingly, what you see in the above SVG excerpt is the first letter "c" in the heart logo. If you look closely, the "c" has 2 straight lines and 2 curvy parts -- and this is reflected in the SVG with 2 line commands (`l`) and 2 Bézier commands (`c`).
 
 > ![](https://i.imgur.com/cUa6hpG.png =x300)  
-> *Screenshot of "c"* in CodePen by hmk
+> *Screenshot of "c" in CodePen*  
+> Screenshot by Holger Kienle, licensed under CC BY-SA 4.0
 
 I [uploaded the SVG excerpt to CodePen](https://codepen.io/anon42/pen/GRGBzoJ?editors=1000), which allows live-rendering and editing of the "c" letter.
 
@@ -286,8 +289,6 @@ I also uploaded a reformatted and annotated copy -- this may qualify as a deriva
 Interestingly, the font file of the letter "c" is under CC BY-SA 4.0. With Weinberg's "bundle" theory this may also mean that the shape of the "c" is licensed as such, independent of its encoding.
 
 One other way to look at it is that we are dealing with a typeface's glyph, which is not necessarily protected by copyright (e.g., this is the case in the US). A declarative specification of the glyph is also not necessarily protected (e.g., this may be the case in the US). The SVG encoding of the "c" happens to be such a declarative specification!
-
-@@@ licensing of "c": CC BY-SA 4.0 or none
 :::
 
 
@@ -312,12 +313,14 @@ FreeCAD can be used to recreate shapes approximately. For example, you can take 
 Inkscape can load and render SVG files. Thus, we can load the heart logo with Inkscape and explore its properties.
 
 > ![](https://i.imgur.com/odIzBFU.png =x250)  
-> *Inkscape screenshot of first "c" in heart logo* by hmk
+> *Inkscape screenshot of first "c" in heart logo*  
+> Screenshot by Holger Kienle, licensed under CC BY-SA 4.0
 
-Ofter ungrouping and using the [node tool](https://inkscape-manuals.readthedocs.io/en/latest/node-operations.html), we can graphically see the nodes that make up the "c".
+After ungrouping and using the [node tool](https://inkscape-manuals.readthedocs.io/en/latest/node-operations.html), we can graphically see the nodes that make up the "c".
 
 > ![](https://i.imgur.com/YDIRp8Q.png =x250)  
-> *Inkscape screenshot of mutilated "c" in heart logo* by hmk
+> *Inkscape screenshot of mutilated "c" in heart logo*  
+> Screenshot by Holger Kienle, licensed under CC BY-SA 4.0
 
 The nodes can be interactively manipulated to arrive at a mutilated "c", creating a derivative work. Since the file that contains the "c" is CC BY-SA 4.0, the derived shape should be licensed likewise. Or is the font file a collection of glyphs? If so, we do not know the license of the individual glyphs and have to assume each glyph is copyrighted -- if copyright protection applies in the first place.
 
@@ -325,41 +328,25 @@ For our case study we will not change the shape of the heart logo, we are only [
 :::
 
 
+### virtual 3D (.FCStd, STL, and g-code)
+
+We are now ready to enter the world of 3D with the help of FreeCAD, which allows us to view a flat (2D) object in 3D space and to *pad* a flat surface into a 3D object.
+
+
 :::warning
 **FreeCAD: importing the SVG of the heart logo**
 
 FreeCAD can import an SVG image with `File > Import...`. Each SVG closed path is converted to a corresponding [FreeCAD `Wire`](https://wiki.freecadweb.org/Draft_Wire) object.
 
-> ![](https://i.imgur.com/sK7d2TU.png)
-> *Imported heart logo into FreeCAD (with axis cross)* by hmk
+> ![](https://i.imgur.com/sK7d2TU.png)  
+> *Imported heart logo into FreeCAD (with axis cross)*  
+> Screenshot by Holger Kienle, licensed under CC BY-SA 4.0
 
 Since the heart logo has 4 closed path, we get 4 corresponding `Wire` objects named `Path`, `Path001`, `Path002` and `Path003`. The objects are placed on the XY-plane in the 3D space.
 
 We can rename the objects to more telling names: `heart-inner`, `heart-outer`, `c-first` and `c-second`, respectively.
-
-We now have the same shape in a different encoding. (Changing the format/encoding is allowed for all CC licenses, even with a ND license element; but remember, the heart logo has no CC license.)
 :::
 
-
-:::warning
-**FreeCAD: applying a license**
-
-By default the design in a FreeCAD file is `All rights reserved`. To change this, go to `File > Project information...` to pick a CC license.
-
-> ![](https://i.imgur.com/XF8BDpa.png)  
-> This screenshot by *hmk* is licensed under CC BY. Placed into the public domain with CC Zero
-
-The license URL is filled in automatically (with version 4.0). Note that CC Zero is not available, but you can use the `Other` category for more flexibility.
-
-There is a `Created by` text field that can be used for the *A* in *TASL*. There is a also a `Comment` text field that can be (ab)used for more detailed attribution or licensing information.
-
-I licensed the heart logo FreeCAD file with CC BY-SA 4.0 and gave `hmk` as creator.
-:::
-
-
-### 3D
-
-We are now ready to enter the world of 3D with the help of FreeCAD, which allows us to *extrude* a flat surface into a 3D object.
 
 ::: success
 **adding a dimension: from 2D to 3D**
@@ -372,52 +359,96 @@ Let's say you select an existing 2D work under copyright and "extend" it into a 
 
 The artist [Jeff Koons]() used a photograph as a starting point to commission a sculpture. As Traub emphasizes, this "was not a case about two photographs, but about a sculpture and a [post]card." Traub also contrasts the quality of the different works: A cheap postcard for trivial amusement on the one side, a highly crafted artwork with carefully selected materials displayed in a museum on the other side. The effect of the sculpture was presumably quite stunning on the observer. According to Traub, Koon's lawyer "strongly questioned whether a sculpture could *ever* be considered a copy of a photograph, so great was the transformation required in the change of medium".
 
-Regardless, the court focused on the basic fact that the sculpture was a ['substantially similar'](https://en.wikipedia.org/wiki/Substantial_similarity) copy of the original work. Thus, changing the media from 2D to 3D did not avoid infringement.
+Regardless, the court focused on the basic fact that the sculpture was a ['substantially similar'](https://en.wikipedia.org/wiki/Substantial_similarity) copy of the original work (*substantial similarity test*). Thus, changing the media from 2D to 3D did not avoid infringement.
+
+> ![](https://i.imgur.com/W488GCl.png =x300)  
+> [*Super Mario Brothers Polymer Clay Sculpture*](https://www.instructables.com/Super-Mario-Brothers-Polymer-Clay-Sculpture/) by poofrabbit, image licensed under CC BY-NC-SA 4.0. Cropped from original. Probably a copyright infringement of the original author, used here as example to illustrate a legal issue
+
+These copyright concerns are not restricted to expensive art and famous artists.
+If you create a Super Mario sculpture yourself, it is an artistic work that is automatically protected under copyright. But you have also created a derivative work of a [2D original](https://supermarioplay.com/), thereby infringing on the original work's copyright.
+:::
+
+
+:::danger
+**FreeCAD: applying a license**
+
+By default the design in a FreeCAD file is `All rights reserved`. To change this, go to `File > Project information...` to pick a CC license.
+
+> ![](https://i.imgur.com/XF8BDpa.png)  
+> *FreeCAD dialog to pick a license*  
+> Screenshot by Holger Kienle, placed into the public domain with CC Zero
+
+The license URL is filled in automatically (with version 4.0). Note that CC Zero is not available, but you can use the `Other` category for more flexibility.
+
+There is a `Created by` text field that can be used for the *A* in *TASL*. There is a also a `Comment` text field that can be (ab)used for more detailed attribution or licensing information.
+
+I licensed the heart logo FreeCAD file with CC BY-SA 4.0 (1) within the file and (2) also gave this information in the repository's `README.md`. Note that if you accidentially use different licenses, you are effectively dual-licensing the file.
+
+We now have the same shapes that make up the heart logo in a different encoding (FreeCAD's internal representation vs. SVG). That the logo can now be viewed in 3D space from different angles does not change the fact that it is a derived work. If a court would apply the substantial similarity test, it is very likely that it would affirm similarity.
+
+Hypothetically speaking, if the logo was CC licensed then changing the format/encoding would be allowed under any CC license. However, presumably, for the ND license element changing the format should cause no (significant) changes to the work itself. By importing the SVG into FreeCAD we can now produce "distorted" views, which can change the work significantly. It is highly doubtful whether would be allowed by ND.
+
+To summarize, by importing the logo's SVG (and going to a 3D space) we have created a copy and made a derivative work. Even though we are doing this in the context of non-commercial OER we cannot argue for fair use. However, the CC trademark policy may allow us to create a 3D "sculpture" of the heart logo in our OER context. Boldly, we proceed...
 :::
 
 
 :::warning
 **FreeCAD: modeling the heart logo in 3D**
 
-The original heart logo is under copyright protection. Adding a dimension in going to 3D creates a derivative work. This is a copyright infringement, we cannot hope to argue with fair use. If we had chosen a logo with a CC license without ND it would be perfectly allowed add a dimension.
-
-However, the CC trademark policy may allow us to create a 3D "sculpture" of the heart logo in our OER context. Boldly, we proceed...
-
 It is outside of the scope of the case study to describe the modeling details. I only want to give an impression of the basic idea. (Also, there are several techniques with different trade-offs that could be used.)
 
 > ![](https://i.imgur.com/WaVYUi6.png)  
-> *Heart shape in Sketcher workbench* by hmk, licensed under CC BY-SA 4.0
+> *Heart shape in Sketcher workbench*  
+> Screenshot by Holger Kienle, licensed under CC BY-SA 4.0
 
 We convert the 2 `Wire` objects that make up the heart shape into a [`Sketch`](https://wiki.freecadweb.org/Sketcher_Workbench). The sketch looks rather cluttered because the heart shape is composed of 22 [`BSpline`](https://wiki.freecadweb.org/Sketcher_CreateBSpline) segments. We do not have to manipulate the sketch (luckily), but we can admire the result.
 
 > ![](https://wiki.freecadweb.org/images/c/cc/PartDesign_Pad_example.svg =x150)  
-> [*PartDesign Pad example*](https://wiki.freecadweb.org/File:PartDesign_Pad_example.svg) by Normandc, licensed under BY SA 3.0
+> *Starting with a flat surface (A) and padding it into a 3D shape (B)*  
+> Image [*PartDesign Pad example*](https://wiki.freecadweb.org/File:PartDesign_Pad_example.svg) by Normandc, licensed under BY SA 3.0
 
 > ![](https://i.imgur.com/2WwhFI9.png)  
-> *Padded heart shape in Part Design workbench* by hmk, licensed under CC BY-SA 4.0
+> *Padded heart shape in Part Design workbench*  
+> Screenshot by Holger Kienle, licensed under CC BY-SA 4.0
 
-Note, that we have an inner and an outer outline. In between we have a planar surface (on the XY-plane). FreeCAD offers the [`Pad`](https://wiki.freecadweb.org/PartDesign_Pad/en) tool, which allows us to "pads up" the heart into a 3D volume (by pulling it along the Z-axis).
+Note, that we have an inner and an outer outline. In between we have a flat/planar surface (on the XY-plane). FreeCAD offers the [`Pad`](https://wiki.freecadweb.org/PartDesign_Pad/en) tool, which allows us to "pads up" the heart into a 3D volume (by pulling it along the Z-axis).
 
 > ![](https://i.imgur.com/rqvITLE.png)  
-> *3D heart logo with measurements* by hmk, licensed under CC BY-SA 4.0
+> *3D heart logo with measurements*  
+> Screenshot by Holger Kienle, licensed under CC BY-SA 4.0
 
 The "cc" shape is done analogously. A box-like shape has been created first, which supports both the heart and "cc" shape. We are done with the 3D modeling.
+:::
 
-The model is saved in FreeCAD's [native format](https://wiki.freecadweb.org/File_Format_FCStd#Change_the_source_of_the_file_.FCStd), which has `.FCStd` as suffix. It is important to make this file available, and to make it available under a CC license. Only the `.FCStd` file contains the high-level modeling steps, which allows other to load it into FreeCAD and to easily inspect and manipulate it. The file is available in the GitHub repository with a CC BY-SA license (corresponding to the file's license information; see above): https://github.com/hkienle/cc-course-final/blob/main/ccheart.FCStd
+:::danger
+**FreeCAD: licensing for open content**
+
+The model is saved in FreeCAD's [native format](https://wiki.freecadweb.org/File_Format_FCStd#Change_the_source_of_the_file_.FCStd), which has `.FCStd` as suffix. It is important to make this file available, and to make it available under an OER license. If want to adhere to Open Source Hardware (OSH), it is also [important to allow commercial use](https://www.oshwa.org/faq/#noncommercial)! In effect, for CC licenses we can use CC BY and CC BY-SA. (As already mentioned above, I picked CC BY-SA 4.0.)
+
+Why is it important to make the native file available and to pick a CAD tool that is FOSS such as FreeCAD? Only the `.FCStd` file contains the high-level modeling steps, which allows other to load and to easily inspect and manipulate it. 
+
+In other words, poor choices of software and formats can make "open" content effectively less open or even closed. The [ALMS Framework](http://www.opencontent.org/definition/) provides a guide and further information in the context of OER.
+
+> ![](https://i.imgur.com/DQGV0R8.png)  
+> *[Excerpt of discussion of openness of Prusa MINI](https://github.com/prusa3d/Original-Prusa-MINI/issues/34#issuecomment-849795541)*  
+> Screenshot by Holger Kienle, believed to be fair use
+
+An example how "open" content can effectively be "closed" content, at least for a group of users, are the modeling files of the Prusa MINI 3D printer. The printer is certified as open source hardware, but it uses Autodesk Inventor as CAD software. Not only runs Inventor only on Windows, it is only available as costly subscription option (e.g., USD 290 per month as of December 2022). Additionally, there are annual Inventor releases and [older versions of Inventor cannot open files created with newer versions](https://knowledge.autodesk.com/support/inventor/troubleshooting/caas/sfdcarticles/sfdcarticles/How-can-I-open-Inventor-files-from-a-newer-version-than-the-version-that-I-have-purchased.html)! :shocked_face_with_exploding_head: 
 :::
 
 
 :::warning
 **FreeCAD: from model to mesh**
 
-FreeCAD's native `.FCStd` file format preserves convenient analysis and modification. But it is understood by FreeCAD only.
+FreeCAD's native `.FCStd` file format enables convenient analysis and modification. But it is understood by FreeCAD only.
 
-The STL format is widely understood. It is the *lingua franca* for 3D objects. It somewhat compares to PDF in this respect: Word and LibreOffice can produce PDF, and virtually all printers accept PDF. Similarly, virtually all 3D printing software (so-called *slicers*) accepts STL.
+The STL format is widely understood. It is the *lingua franca* for 3D objects. It somewhat compares to PDF in this respect: Word and LibreOffice can produce PDF, and virtually all printers accept PDF. Similarly, virtually all 3D printing software (so-called *slicers*) accept STL.
 
 > ![](https://i.imgur.com/dveuoZB.png)  
-> *Meshed CC heart logo* by hmk
+> *Meshed CC heart logo*  
+> Screenshot by Holger Kienle, licensed under CC BY-SA 4.0
 
-To arrive at an STL file, we first create an in-memory representation, which is called a [triangle mesh](https://en.wikipedia.org/wiki/Triangle_mesh). In FreeCAD we only have to select the model (i.e., or CC heart logo) and apply the [create mesh operation](https://wiki.freecadweb.org/Mesh_FromPartShape) to it.
+To arrive at an STL file, we first create an in-memory representation, which is called a [triangle mesh](https://en.wikipedia.org/wiki/Triangle_mesh). In FreeCAD we only have to select the model (i.e., our CC heart logo) and apply the [create mesh operation](https://wiki.freecadweb.org/Mesh_FromPartShape) to it.
 
 The STL format preserves key properties of the 3D object, namely its shape. However, even this is not quite true. STL only approximates the shape with many small planar surfaces. In effect, curves are approximated by straight lines.
 
@@ -425,30 +456,16 @@ The STL format preserves key properties of the 3D object, namely its shape. Howe
 > 
 > ![](https://i.imgur.com/6vVRg0F.png =x200) Fine meshing
 >
-> *Different meshing algorithms and settings result in cruder or finer meshings* by hmk
+> *Different meshing algorithms and settings result in cruder or finer meshings*
+> Screenshot by Holger Kienle, licensed under CC BY-SA 4.0
 
 If the mesh's resolution is fine-grained enough for our intended purpose, the mesh's approximation will not matter. FreeCAD's default meshing works well for our needs. 
 
-> ![](https://i.imgur.com/HKQG1d4.png)
-> [Lion](https://www.thingiverse.com/thing:728085) by 3DWP, licensed under CC BY-SA 3.0. Screenshot of 3D model by hmk
+> ![](https://i.imgur.com/HKQG1d4.png =x250)  
+> *Meshing-look for artistic effect*  
+> 3D object [Lion](https://www.thingiverse.com/thing:728085) by 3DWP, licensed under CC BY-SA 3.0. Screenshot of 3D model by Holger Kienle, licensed under CC BY-SA 4.0
 
 However, if the mesh's resolution is too course it can affect the 3D-printed object. A mesh-effect can be used on purpose as artistic effect.
-:::
-
-
-:::success
-**2D versus 3D, copyright versus patent**
-
-Does it make a fundamental difference if a work is fixated on a canvas (2D) or fixated with a sculpture (3D)? If it is a purely artistic work there is no fundamental difference -- copyright applies to both.
-
-> ![](https://i.imgur.com/W488GCl.png =x150)  
-> [*Super Mario Brothers Polymer Clay Sculpture*](https://www.instructables.com/Super-Mario-Brothers-Polymer-Clay-Sculpture/) by poofrabbit, image licensed under CC BY-NC-SA 4.0. Cropped from original. Probably a copyright infringement of the original author, used here as example to illustrate a legal issue
-
-If you create a 3D sculpture of Super Mario, it is an artistic work that is automatically protected under copyright. (You also created a derivative work of a 2D original, thereby infringing on the original work's copyright.)
-
-However, if a 3D object is a useful object (i.e., it is serving a purpose) then the object may be applicable for patent protection. Weinberg (2013) makes the point that "in a practical sense, **copyrights and patents are mutually exclusive**. If you have a useful article you cannot protect it with a copyright" (boldface added).
-
-As a consequence relatively few 3D objects in the physical are protected by IP because patenting an objects has several hurdles: the object must meet the criteria of non-obviousness, it must not have been patented before, and the patent must be applied for in a lengthy and costly process involving a lawyer. In contrast, if copyright applies to a work it is automatically granted with its fixation.
 :::
 
 
@@ -457,7 +474,7 @@ As a consequence relatively few 3D objects in the physical are protected by IP b
 
 In FreeCAD, a mesh object can be exported with `File > Export`. STL files typically have the suffix `.stl`. If you use `.stl` then FreeCAD will produce a binary STL file, with `.ast` you will get a textual (ASCII) STL.
 
-You can inspect a textual STL. It consists of geometric information (coordinates) that are impossible to process by (ordinary) humans.
+You can inspect a textual STL. It consists of geometric information (coordinates) that are impossible to comprehend by (ordinary) humans.
 
 Here is the start of our STL file, which has 6135 lines in total:
 ```
@@ -474,8 +491,24 @@ solid Mesh
       vertex 47.730000 0.000000 0.000000
       [...]
 ```
+:::
 
-You can add comments to a textual STL by starting them with a semicolon (`;`). This allows us to add licensing information:
+
+:::danger
+**Licensing STL**
+
+STL is essentially structured data. One can look at it as
+- a [data file](https://en.wikipedia.org/wiki/Data_file)
+- a data set (specifiying 3D coordinates for triangles)
+- a simple database (with an [*implicit schema*](https://research.cs.queensu.ca/home/cordy/Papers/IWPC02_Exchange.pdf) that is described in a prose specification)
+
+Even if we can view an STL as a simple database, this does not mean that the file is protected under [sui generis database rights]( https://en.wikipedia.org/wiki/Database_right) because the STL is generated without much effort and does not represent a significant investment.
+
+These (technical) distinctions may perhaps not matter when selecting a license. The CC licenses cover may use cases, among them ["dissemination or reuse of data"](https://wiki.creativecommons.org/wiki/Data#What_is_the_difference_between_the_Open_Data_Commons_licenses_and_the_CC_4.0_licenses.3F)
+
+In line with other assets of the case study, the STL file of the heart logo is licensed with CC BY-SA 4.0. (As discussed before, the STL is a derivative work of a work copyrighted by Creative Commons and the trademark policy may or may not sanction it.)
+
+It is possible to add comments to a textual STL by starting them with a semicolon (`;`). This allows us to add licensing information directly within the file:
 ```
 ; Copyright Holger Kienle
 ; This work is licensed under CC BY-SA 4.0.
@@ -484,6 +517,8 @@ solid Mesh
   facet normal -0.000000 -1.000000 0.000000
       [...]
 ```
+
+There are also the Open Knowledge Foundation's [ODC-BY 1.0](https://opendatacommons.org/licenses/by/summary/) or [ODbL 1.0](https://opendatacommons.org/licenses/odbl/summary/) licenses -- the latter is a copyleft/share-alike license -- that specifically target databases, but they ["do not apply to the individual contents of the database"](https://wiki.creativecommons.org/wiki/Data#What_is_the_difference_between_the_Open_Data_Commons_licenses_and_the_CC_4.0_licenses.3F)! Since the STL is probably not a database in the legal sense, it seems best to stick to the more encompassing CC licenses.
 :::
 
 
@@ -493,40 +528,149 @@ solid Mesh
 We are close to a physical print. PrusaSlicer is one of many FOSS slicers for 3D printers.
 
 > ![](https://i.imgur.com/6ll3LDI.png)
-> *CC heart logo imported to PrusaSlicer* by hmk.
+> *CC heart logo imported to PrusaSlicer*  
+> Screenshot by Holger Kienle, licensed under CC BY-SA 4.0
 
 With PrusaSlicer we can import our STL file. After the import, we see a rendering of the object on the virtual build plate.
 
 It looks not much different to what we see with FreeCAD. But in contrast to FreeCAD, PrusaSlicer only allows rudimentary modification of the object such as scaling. (It is a bit like having a document in LibreOffice versus PDF Reader.)
 
-Furthermore, PrusaSlicer allows us to control how the object will be printed. There are actually many considerations and trade-offs, ranging from the print material, over the infill-pattern and wall strength to the print speed and quality.
+Most importantly, PrusaSlicer allows us to control how the object will be printed. There are actually many considerations and trade-offs, ranging from the print material, over the infill-pattern and wall strength to the print speed and quality.
 
 > ![](https://i.imgur.com/92mtXlL.png)
-> *Preview shows first print layer of the heart and "cc" shapes* by hmk
+> *Preview shows first print layer of the heart and "cc" shapes*  
+> Screenshot by Holger Kienle, licensed under CC BY-SA 4.0
 
 > ![](https://i.imgur.com/a1qyyET.png)
-> *Detail of first layer of "c"* by hmk
+> *Detail of first layer of "c": Each colored line is a "thread" of filament that is squished out by the print head*  
+> Screenshot by Holger Kienle, licensed under CC BY-SA 4.0
 
 One key feature of PrusaSlicer is to simulate the print-run, layer by layer. PrusaSlicer also estimates  the print time and how much material (filament) will be consumed. With the default settings, the heart logo prints in 33 minutes.
 
 > ![](https://i.imgur.com/xXAJwPB.png)
-> *Left shows instructions for moving the print head* by hmk
+> *Left panel shows g-code instructions for moving the print head; main view shows the position of the print head for the correspondng g-code line*  
+> Screenshot by Holger Kienle, licensed under CC BY-SA 4.0
 
 The instructions that control the functioning of the printer are called g-code. One line of g-code only produces a tiny piece of the object: To print the outline of the "c" about 60 lines of g-code are needed. For our printout, the printer will do 2 outlines of the "c" shape (for more wall thickness and better strength). And it will do this for 10 layers such that the logo has some height.
 
-Importantly, the generated g-code is for a specific 3D printer model. (It is like assembly code, which has to match the CPU.) Typically, you need the STL file and slicing software to generate g-code for your own 3D printer.
+Importantly, the generated g-code is for a specific 3D printer model, in our case the Prusa MINI. (G-code is like assembly code, which has to match the CPU.) You need the STL file and slicing software to generate g-code for your own 3D printer.
 
 Usually, only the STL is published. But there is no harm in publishing the g-code for people that happen to have the same 3D printer model than you. This saves them the trouble of generating the g-code themselves (as long as they are happy with the settings that you used to produce the g-code).
 
-While the STL of a 3D model can still be manipulated to some degree, g-code is usually just executed as-is.
+While the STL of a 3D model can still be manipulated to some degree by the slicer or dedicated software (e.g., [MeshLab](https://www.meshlab.net/#)), g-code is usually just executed as-is.
+:::
 
-The g-code file uses `;` for comments, just as STL. We can open the g-code in a text editor and add copyright and license information:
+
+:::danger
+**Licensing g-code**
+
+For the first time we are licensing software code. G-code is a bit of a peculiar kind of programming language for controlling automated machine tools that originated in 1950s, but g-code are low-level software programs.
+
+[Creative Commons does not recommend to license software with its licenses](https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software). Among the reasons given, dedicated software licenses:
+- may address patent rights (which is not covered by CC licenses).
+- can use concepts such as source code, object code, system libraries, etc. to describe the rules of the license.
+
+License compatibility can also be an important consideration for the purpose of "remixing" code.
+
+Interestingly, [CC Zero can be used for software](https://wiki.creativecommons.org/wiki/CC0_FAQ#May_I_apply_CC0_to_computer_software.3F_If_so.2C_is_there_a_recommended_implementation.3F), but t "has not been approved by the Open Source Initiative".
+
+The [GNU General Public License](https://www.gnu.org/licenses/licenses.html#GPL) (GPL) the most widely know and used software license and is used "by more than half of all free software packages". GPL is copyleft and in spirit very similar to the ShareAlike licensing element.
+
+The GPL comes in various version, 3.0 is the latest, but 2.0 is still also relevant. Importantly, one can not only pick the version but also whether a user of the license has the option to apply a later version if she wishes to do so ("or any later version"). When denoting the license, [Richard Stallman](https://www.gnu.org/licenses/identify-licenses-clearly.html
+) makes the plea to clearly say, for instance, "GPL-2.0-only" or "GPL-2.0-or-later".
+
+I license the g-code with GPL-2.0-or-later because:
+- I want a copyleft license and GPL is most well known.
+- GPL is similar in spirit to CC BY-SA.
+- Version 2.0 or later gives the most flexibility for future reuse.
+
+
+Analogous to STL, the g-code file uses `;` for comments. We can open the g-code in a text editor and add copyright and license information:
 ```
 ; Copyright Holger Kienle
-; Licensed under GNU General Public License v3.0 or later (SPDX: GPL-3.0-or-later)
+; Licensed under GNU General Public License v2.0 or later (SPDX: GPL-2.0-or-later)
 ; To view a copy of this license, visit https://www.gnu.org/licenses/gpl-3.0-standalone.html
 [...g-code...]
+```
+
+Actually, when licensing g-code, a dedicated software license may not be strictly necessary because g-code is directly interpreted by a machine and the distinction between source and object/binary code does not apply. Also g-code has no concept of libraries or API calls. But using a dedicated software license feels the right thing to do.
 :::
+
+
+### physical 3D
+
+:::warning
+**Prusa MINI: printing the g-code**
+
+{%youtube NZ0qzvlBQhs%}  
+> *Printing the heart logo with the Prusa MINI (5x speedup)*  
+> [Video](https://www.youtube.com/watch?v=NZ0qzvlBQhs
+) by Holger Kienle, licensed under CC BY-SA 4.0
+
+> ![](https://i.imgur.com/N9WczrZ.jpg =x300)  
+> *Finished heart logo badge/stamp on the Prusa MINI's build plate*  
+> Image by Holger Kienle, licensed under CC BY-SA 4.0
+
+Finally, we can transfer the g-code to the Prusa MINI and hit the start button. (There are quite of few things that can go wrong during the print, but here we assume an ideal scenario.)
+:::
+
+
+:::danger
+**publishing on printables.com**
+
+@@@
+:::
+
+:::success
+**mutually exclusive: copyright or patent**
+
+To summarize what we already know: When dealing with artistic creations that are fixated in writing, on canvas, as recording, etc. then almost certainly the work is automatically protected under copyright. If the copyright has not expired and the work is in the public domain, the fair use doctrine applies, which permits limited use of the copyrighted work.
+If the copyrighted work is claimed as a trademark then (1) you may use the work in a descriptive manner and/or (2) there may be a trademark policy that spells out how the work can be used.
+
+When moving away from artistic creations to real-world (3D) objects, the starting point should be to question whether copyright actually applies. If the object is useful (i.e., it is serving a purpose) then copyright does not apply, but the object may be protect*able* with a (utility) patent. Note that protect*able* does not mean that the object is necessarily protected by a patent.)
+
+As a general rule, Weinberg (2013) makes the point that
+> "in a practical sense, **copyrights and patents are mutually exclusive**. If you have a useful article you cannot protect it with a copyright"  
+> (boldface added).
+If something is protected under copyright, it cannot be protected as patent; and vice versa. A chair is a useful object and if it embodies a novel invention then the chair can be patented. In other words, the product of an industrial design process is not copyright protected.
+
+Conversely, a chair is not protected under copyright! If we have an ordinary, boring chair, no utility patent and no copyright can be claimed. A sculpture, in the sense of a 3D artwork, is (automatically) copyrighted. If, accidentially, you could abuse it as a chair or bottle opener, this does not make it patentable.
+
+In practice, relatively few 3D objects in the physical world are protected by IP because patenting an objects has several hurdles: the object must meet the criteria of non-obviousness, it must not have been patented before, and the patent must be applied for in a lengthy and costly process involving a lawyer. In contrast, if copyright applies to a work it is automatically granted with its fixation.
+:::
+
+
+:::danger
+**physical heart logo: copyright or patent viewpoint**
+
+For the printed out heart logo we can ask: Is it a useful object?
+
+- Yes (it is a stamp): We can argue that it is a useful object because it can be used as a stamp: We can use a rubber-stamp pad to transfer the logo to a piece of paper. This would mean that our stamp has no copyright protection. But we could consider whether the stamp can be patented. Besides having no intention to do it seems unlikely that the stamp would be considered non-obvious. (But many trivial patents have been granted like [*method of swinging on a swing*](https://www.newscientist.com/article/dn2178-boy-takes-swing-at-us-patents/).)
+- No (it is a badge): We can argue that the object is a decorative badge that is meant for wearing as a fashion accessory. In this case, it is not patentable. It may have an (automatic) copyright as an artistic brooch or mini-sculpture. (Remember, the threshold for "creative spark" is quite low.)
+:::
+
+
+:::success
+**Janus-faced 3D objects**
+
+I have not told the full story of the copyright-patent dichotomy. The real world is more difficult.
+
+The copyright vs. utility patent rule breaks down for Janus-type objects that both (1) are useful and (2) have artistic elements. In such cases, the law tries to deconstruct the object into artistic elements and utilitarian functionality, and then applies copyright and patent law correspondingly (*conceptual severability test*). This approach works reasonably well if you image a chair with an artwork on its back rest, but often has high uncertainty. (Supreme court judges [disagreed](http://www.maw-law.com/copyright/r-p-conceptual-separability-test/) on an actual case.)
+
+Most copyrighted works that we are dealing with are 2D. Most -- actually: all? -- real-world objects we are dealing with are 3D. As we learned, for 3D objects copyrightability vs. patentability needs to be considered. At one extreme, a 3D object may have neither copyright nor patent protection, at the other extreme it may have both copyright-protected and patented features.
+
+For 3D objects (real or virtual) it is often the case that derived 2D works exist: For example, a 2D photograph is taken of a 3D sculpture. Or a blueprint is created from a 3D CAD model (FreeCAD supports this with the [Techdraw workbench](https://wiki.freecadweb.org/TechDraw_Workbench)).
+
+The other way around, 2D artwork can be applied to a 3D object: An photo can be printed on a T-shirt, a fabric design is applied to a [cheerleader uniform](https://en.wikipedia.org/wiki/Star_Athletica%2C_LLC_v._Varsity_Brands%2C_Inc.). Neither the cut of the T-shirt nor the cut of the uniform can be copyrighted, but the artwork is. This is especially clear if the artwork existed first in 2D, regardless whether in its final form of as a conceptual sketch from which the final work has been derived.
+:::
+
+
+:::danger
+**physical heart logo: Janus-faced viewpoint**
+
+@@@
+:::
+
 
 
 :::success
@@ -540,71 +684,10 @@ Nothing is ever clear cut. Let's say we have a vacuum cleaner. It clearly is a u
 This is not a hypothetic example, as the sculpture *New Shop-Vac Wet/Dry* shows. Its materials are an industrial vacuum cleaner, acrylic, and fluorescent lights.
 :::
 
-
-
-
-:::warning
-**what is a stamp?**
-
-Copyright of a 3D shape (candlestick)
-:::
-
-
-freecad documentation has CC license
-
-https://www.gnu.org/licenses/identify-licenses-clearly.html
-
-@@@ Poor Technical Choices Make Open Content Less Open http://www.opencontent.org/definition/
-
-
-## ordering the skeins
+## parting thoughts
 
 > ![](https://i.imgur.com/Pcl7gSC.png)
 >
 > *Not exactly a unanimous decision by the Supreme Court involving an IP case: [Star Athletica LLC v. Varsity Brands](https://www.supremecourt.gov/opinions/16pdf/15-866_0971.pdf)*, screenshot from PDF, believed to be in the public domain in the US, otherwise believed to be fair use
 
-Let's try to organize key points succinctly.
-
-When dealing with artistic creations that are fixated in writing, on canvas, as recording, etc. then almost certainly the work is automatically protected under copyright. If the copyright has not expired and the work is in the public domain, the fair use doctrine applies, which permits limited use of the copyrighted work. 
-
-If the copyrighted work is claimed as a trademark then (1) you may use the work in a descriptive manner and/or (2) there may be a trademark policy that spells out how the work can be used.
-
-When moving away from artistic creations to real-world objects, the starting point should be to question whether copyright actually applies. If the object is useful (i.e., it is serving a purpose) then copyright does not apply, but the object may be protect*able* with a (utility) patent. Note that protect*able* does not mean that the object is necessarily protected by a patent.)
-
-As a general rule: If something is protected under copyright, it cannot be protected as patent; and vice versa. A chair is a useful object and if it embodies a novel invention then the chair can be patented. In other words, the product of an industrial design process is not copyright protected.
-
-Conversely, a chair is not protected under copyright! If we have an ordinary, boring chair no utility patent and no copyright can be claimed. A sculpture, in the sense of a 3D artwork, is copyrighted. If, accidentially, you could abuse it as a chair or bottle opener, it does not make it patentable.
-
-The copyright vs. utility patent rule breaks down for Janus-type objects that both (1) are useful and (2) have artistic elements. In such cases, the law tries to deconstruct the object into artistic elements and utilitarian functionality, and then applies copyright and patent law correspondingly (*conceptual severability test*). This approach works reasonably well if you image a chair with an artwork on its back rest, but often has high uncertainty. (Supreme court judges [disagreed](http://www.maw-law.com/copyright/r-p-conceptual-separability-test/) on a actual case.)
-
-
-Most copyrighted works that we are dealing with are 2D. Most -- actually: all? -- real-world objects we are dealing with are 3D. As we learned, for 3D objects copyrightability vs. patentability needs to be considered. At one extreme, a 3D object may have neither copyright nor patent protection, at the other extreme it may have both copyright-protected and patented features.
-
-For 3D objects (real or virtual) it is often the case that derived 2D works exist: For example, a 2D photograph is taken of a 3D sculpture. Or a blueprint is created from a 3D CAD model (FreeCAD supports this with the [Techdraw workbench](https://wiki.freecadweb.org/TechDraw_Workbench)).
-
-The other way around, 2D artwork can be applied to a 3D object: An photo can be printed on a T-shirt, a fabric design is applied to a [cheerleader uniform](https://en.wikipedia.org/wiki/Star_Athletica%2C_LLC_v._Varsity_Brands%2C_Inc.). Neither the cut of the T-shirt nor the cut of the uniform can be copyrighted, but the artwork is. This is especially clear if the artwork existed first in 2D, regardless whether in its final form of as a conceptual sketch from which the final work has been derived.
-
-
-
-
-- idea-expression dichotomy
-- transformational use doctrine
-- substantial similarity test
-- conceptual severability test
-
-
-## parting thoughts
-
-
-
-Copyright covers many domains: text, sound, images
-sui generis
-
-
-It is an interesting question whether a declarative specification, such as SVG commands, qualifies as source code, which would be automatically protected by copyright. The copyright cannot extend to the shape of the letter "c", but it may cover the (exact) content of the SVG file. In other words, the general idea or the [algorithm of drawing a "c" with SVG commands cannot be copyrighted](https://law.stackexchange.com/questions/4097/does-copyrighted-code-protect-intellectual-property-rights-on-novel-algorithms-i). But a particular specification of drawing a "c" may well be.
-
-
-## appendix: troubleshooting
-
-> ![](https://i.imgur.com/ClYPreh.png)
-> Import from SVG causes self-intersecting wires
+@@@
