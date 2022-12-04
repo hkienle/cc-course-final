@@ -15,6 +15,8 @@ The content in this repository is intended as Open Educational Resource (OER), w
 
 Copyright and licensing information for the files in the **root directory** of this repository are as follows:
 
+- `case_study.md`: Backup copy from [HackMD](https://hackmd.io/@hkienle/cc-course-case_study). GitHub cannot render this file properly because the GitHub's markdown formatting is not compatible with HackMD. Copyright by Holger Kienle, licensed under CC BY-SA 4.0.
+
 - `ccheart_black.svg`: Unzipped original file of the *CC heart logo* from https://creativecommons.org/about/downloads/. Copyright and trademark by Creative Commons.
 - `ccheart_black-inkscape`: Created by loading `ccheart_black.svg` into Inkscape and immediately saving it. Copyright and trademark by Creative Commons.
 - `ccheart_black-inkscape-resized`: Created by loading `ccheart_black-inkscape.svg` into Inkscape and resizing it. Copyright and trademark by Creative Commons.
