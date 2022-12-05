@@ -30,7 +30,8 @@ If this case study feels like a wild roller coaster, it is so because IP law is 
 :::
 
 :::success
-:bulb: [There is a GitHub repository with all assets and license information!](https://github.com/hkienle/cc-course-final)
+:bulb: [There is a GitHub repository with all assets and license information!](https://github.com/hkienle/cc-course-final)  
+:bulb: [Files for 3D-printing are available at Printables](https://www.printables.com/model/332934-cc-heart-badge)!
 :::
 
 **CC Certificate for Educators - Fall 2022 - Final**
@@ -620,9 +621,21 @@ Finally, we can transfer the g-code to the Prusa MINI and hit the start button. 
 
 
 :::danger
-**publishing on printables.com**
+**publishing on Printables**
 
-@@@
+There are sharing platform for photographs, videos and icons. In the same spirit, there are platforms for sharing 3D-printable files. The perhaps most well-known one is [Thingiverse](https://www.thingiverse.com/). A more recent and modern platform, offered by Prusa, is [Printables](https://www.printables.com).
+
+I uploaded the [files for the CC heart logo to Printables](https://www.printables.com/model/332934-cc-heart-badge).
+
+I made the following observations regarding the platform:
+- It is possible to explicitly identify that my work is derived from the Creative Commons's SVG heart logo file.  
+![](https://i.imgur.com/dC3ztqG.png)
+- It is required to select a license. However this choice applies to all files.
+![](https://i.imgur.com/atQaDc2.png)
+Since CC licenses cover many types of work, it is a better choice than applying a software license (GNU or BSD). I fell comfortable to use a CC license for g-code because it is a single isolated file that gets interpreted. (A CC license would be much more problematic for a compiled language (like C) and a program consisting of several interrelated source files that contain API-calls to (external) libraries.)
+- It seems that there is no history when the licensed is changed later on. This, of course, can lead to problems, including abuses from copyright trolls. Flickr recently has added a license history feature.
+- It is implied that a CC license only applies to copyright and does not cover other applicable laws such as trademarks. However, I felt I should put users explicitly on notice about CC's trademark policy.
+![](https://i.imgur.com/Smr3WT4.png)
 :::
 
 :::success
@@ -701,15 +714,15 @@ So, the strict dichotomy between copyright and patent does not exist for all 3D 
 >
 > *Not exactly a unanimous decision by the Supreme Court involving an IP case: [Star Athletica LLC v. Varsity Brands](https://www.supremecourt.gov/opinions/16pdf/15-866_0971.pdf)*, screenshot from PDF, believed to be in the public domain in the US, otherwise believed to be fair use
 
-Perhaps once in a while you reach the point where you feel utterly confused about copyright and its many interacting laws: trademarks, contract law, utility patents, design patents. And the doctrines and test to sort out copyright and IP: idea-expression dichotomy, transformational use doctrine, substantial similarity test, conceptual severability test, etc.
+Perhaps once in a while you reach the point where you feel utterly confused about copyright and its interacting laws: trademarks, contract law, utility patents, design patents. And the doctrines and test to sort out copyright and IP: idea-expression dichotomy, transformational use doctrine, substantial similarity test, conceptual severability test, etc.
 
 Well, do not despair: Supreme Court judges cannot agree either on what is going on ([Star Athletica LLC v. Varsity Brands](https://www.supremecourt.gov/opinions/16pdf/15-866_0971.pdf)). :confused:
 
-The best we can do is to remember: There is the strictly legal side, but there is also the human side and its desire to remix and to be part of a community. When it comes to licensing and sharing, let's proceed with the best of intentions and hope that others will act likewise.
+The best we can do is to remember: There is the strictly legal side, but there is also the human side and humanities desire to remix and to be part of a community. When it comes to licensing and sharing, let's proceed with the best of intentions and hope that others will act likewise.
 
-> ![](https://i.imgur.com/hc1F6W2.png =x300)  
-> *The stamp in action...wait a minute, what's that!?...:anguished:*  
-> *It looks like we need at least one more iteration before we can start to roll out high-volume production...*  
+> ![](https://i.imgur.com/hc1F6W2.png =x350)  
+> *The stamp in action...wait a minute, what has happened to the "cc"!? :anguished:*  
+> *Oh well, it looks like we need at least one more iteration before we can start to roll out high-volume production...*  
 > Photo by Holger Kienle, licensed under CC BY-SA 4.0
 
-With licensing, as with real life, sometimes you won't quite get the expected result. But keep trying! :nerd_face:
+With licensing, as with 3D-printing, sometimes you won't quite get the results you hoped for. But keep trying! :nerd_face:
