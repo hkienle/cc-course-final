@@ -26,7 +26,7 @@ Copyright and licensing information for the files in the **root directory** of t
 - `ccheart.stl` `ccheart.ascii.stl`: Copyright by Holger Kienle, licensed under CC BY-SA 4.0. Creative Commons' trademark policy applies.
 - `ccheart_0.2mm_PLA_MINI_33m.gcode`: Copyright by Holger Kienle, licensed under GPLv2 or later (SPDX: GPL-2.0-or-later).
 
-For the images in the **`screenshot` directory** of this repository:
+For the images in the **`screenshot` and `photo` directories** of this repository:
 - Except otherwise noted, copyright by Holger Kienle, licensed under CC BY-SA 4.0. If the *CC heart logo* is depicted in the screenshot, note that the logo is copyright and trademark by Creative Commons.
 - `freecad-project_information.png`: CC Zero. To the extent possible under law, Holger Kienle has waived all copyright and related or neighboring rights in this file. This work is published from: Germany.
 - `thingiverse-lion.png`: 3D object [Lion](https://www.thingiverse.com/thing:728085) by 3DWP, licensed under CC BY-SA 3.0
