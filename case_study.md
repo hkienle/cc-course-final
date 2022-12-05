@@ -26,7 +26,11 @@ I cannot give legal advice and I am not a lawyer anyways. What I can do is to ma
 
 Whenever you read a sentence discussing legal issues, you should prepend it with: As you know, the author is not a lawyer and only gives his opinion as a lay person **for entertainment purposes only**. Also, the specifics of the law will vary depending on the country, even on the [regional circuit](https://system.uslegal.com/us-courts-of-appeals/circuits/) in the US.
 
-It this case study feels like a wild roller coaster, it is so because IP law is a wild roller coaster... Enjoy! :nerd_face:
+If this case study feels like a wild roller coaster, it is so because IP law is a wild roller coaster... Enjoy! :nerd_face:
+:::
+
+:::success
+:bulb: [There is a GitHub repository with all assets and license information!](https://github.com/hkienle/cc-course-final)
 :::
 
 **CC Certificate for Educators - Fall 2022 - Final**
@@ -48,7 +52,7 @@ The starting point of the case study is the CC logo with a heart outline (2D).
 > Result: physical 3D object  
 > Photo by Holger Kienle
 
-At the end we will have produced a physical 3D object that can be used as a "badge" or function as a "rubber stamp".
+At the end we will have produced a physical 3D object that can be used as a "badge/brooch" or function as a "rubber stamp".
 
 ### GitHub repository
 
@@ -351,7 +355,7 @@ We can rename the objects to more telling names: `heart-inner`, `heart-outer`, `
 ::: success
 **adding a dimension: from 2D to 3D**
 
-Let's say you select an existing 2D work under copyright and "extend" it into a 3D work. For example, you select a cartoon character that previously existed on paper only and make a sculpture out of it. Generally speaking such a modification is a copyright infringement.
+Let's say you select an existing 2D work by someone else that is under copyright and "extend" it into a 3D work. Your 3D work is a [sculpture, which is clearly protected by copyright](https://copyright.uslegal.com/enumerated-categories-of-copyrightable-works/pictorial-graphic-and-sculptural-work/). Generally speaking such a modification -- from 2D to sculpture -- creates a derivative work and is a copyright infringement.
 
 > ![](https://i.imgur.com/rHmbG5t.png =x250)
 ![](https://i.imgur.com/IFTCs0N.png =x250)  
@@ -589,7 +593,7 @@ Analogous to STL, the g-code file uses `;` for comments. We can open the g-code 
 ```
 ; Copyright Holger Kienle
 ; Licensed under GNU General Public License v2.0 or later (SPDX: GPL-2.0-or-later)
-; To view a copy of this license, visit https://www.gnu.org/licenses/gpl-3.0-standalone.html
+; To view a copy of this license, visit https://www.gnu.org/licenses/gpl-2.0-standalone.html
 [...g-code...]
 ```
 
@@ -632,16 +636,27 @@ When moving away from artistic creations to real-world (3D) objects, the startin
 As a general rule, Weinberg (2013) makes the point that
 > "in a practical sense, **copyrights and patents are mutually exclusive**. If you have a useful article you cannot protect it with a copyright"  
 > (boldface added).
+
 If something is protected under copyright, it cannot be protected as patent; and vice versa. A chair is a useful object and if it embodies a novel invention then the chair can be patented. In other words, the product of an industrial design process is not copyright protected.
 
 Conversely, a chair is not protected under copyright! If we have an ordinary, boring chair, no utility patent and no copyright can be claimed. A sculpture, in the sense of a 3D artwork, is (automatically) copyrighted. If, accidentially, you could abuse it as a chair or bottle opener, this does not make it patentable.
 
-In practice, relatively few 3D objects in the physical world are protected by IP because patenting an objects has several hurdles: the object must meet the criteria of non-obviousness, it must not have been patented before, and the patent must be applied for in a lengthy and costly process involving a lawyer. In contrast, if copyright applies to a work it is automatically granted with its fixation.
+> ![](https://i.imgur.com/kXkojD9.png =x200)  
+> [*New Shop-Vac Wet/Dry*](http://www.jeffkoons.com/artwork/the-new/new-shop-vac-wetdry) by Jeff Koons, copyright Jeff Koons, believed to be fair use to illustrate a scholarly legal discussion
+
+Let's look at one more fun example. Let's say we have a vacuum cleaner. It clearly is a useful object that falls under patent law. Conversely, copyright law does not apply. (Yet another issue we have not looked at: The looks of the vacuum cleaner could be covered by a [design patent](https://en.wikipedia.org/wiki/Design_patent)). If the vacuum cleaner is used as part of a sculpture, the result is a piece of art, which is not a useful object. This is not a hypothetical example, as the sculpture *New Shop-Vac Wet/Dry* shows. Its materials are an industrial vacuum cleaner, acrylic, and fluorescent lights.
+
+In practice, relatively few 3D objects in the physical world are protected by IP because most objects serve a utilitarian function and patenting them has several hurdles: the object must meet the criteria of non-obviousness, it must not have been patented before, and the patent must be applied for in a lengthy and costly process involving a lawyer.
 :::
 
 
 :::danger
 **physical heart logo: copyright or patent viewpoint**
+
+> ![](https://i.imgur.com/91dPSf1.jpg =x200) ![](https://i.imgur.com/jTSSE4h.jpg =x200)  
+> *Left: 3D printed heart logo as nerdy badge/brooch*  
+> *Right: 3D printed heart logo as (rubber-like) stamp*  
+> Photos by Holger Kienle, licensed under CC BY-SA 4.0
 
 For the printed out heart logo we can ask: Is it a useful object?
 
@@ -668,26 +683,33 @@ The other way around, 2D artwork can be applied to a 3D object: An photo can be 
 :::danger
 **physical heart logo: Janus-faced viewpoint**
 
-@@@
+> ![](https://i.imgur.com/zIZ6ZBX.png =x150)  
+> *Has the physical Coca-Cola rubber stamp no coypright protection because it is strictly serving a utilitarian function of stamping?*  
+> Taken from image search, copyright status unknown, believed to be fair use to illustrate a legal issue in scholarly discussion
+
+So, the strict dichotomy between copyright and patent does not exist for all 3D objects. For our printed heart logo this approach makes more sense. We can try to apply the conceptual severability test:
+- logo as artistic elements: The logo is an artistic element that can be separated out.
+    - If we view our 3D object as a brooch/badge, it is ornamental and has not utility.
+    - If the 3D object functions as a stamp, it (also) serves a utilitarian functions. I have no idea how copyright law would resolve this dilemma, but it would seem strange to resolve the logo's copyright protect -- think of famous logos such as Coca-Cola -- on the ground of the intended/advertised use of the 3D object (brooch vs. stamp).
+- utilitarian functionality: The base that carries the 3D logo is of utilitarian nature to support the artistic element. It is the result of a rudimentary industrial design process: Selecting suitable dimensions and thickness to have sufficient strength. As mentioned before, the result of an industrial design process is not copyright protected.
 :::
 
-
-
-:::success
-**copyright, utility patent, design patent**
-
-Nothing is ever clear cut. Let's say we have a vacuum cleaner. It clearly is a useful object that falls under patent law. Conversely, copyright law does not apply. The looks of the vacuum cleaner could be covered by a [design patent](https://en.wikipedia.org/wiki/Design_patent). If the vacuum cleaner is used as part of a sculpture, the result is a piece of art, which is not a useful object. The [sculpture is protected by copyright](https://copyright.uslegal.com/enumerated-categories-of-copyrightable-works/pictorial-graphic-and-sculptural-work/).
-
-> ![](https://i.imgur.com/kXkojD9.png =x200)  
-> [*New Shop-Vac Wet/Dry*](http://www.jeffkoons.com/artwork/the-new/new-shop-vac-wetdry) by Jeff Koons, copyright Jeff Koons, believed to be fair use to illustrate a scholarly legal discussion
-
-This is not a hypothetic example, as the sculpture *New Shop-Vac Wet/Dry* shows. Its materials are an industrial vacuum cleaner, acrylic, and fluorescent lights.
-:::
 
 ## parting thoughts
 
-> ![](https://i.imgur.com/Pcl7gSC.png)
+> ![](https://i.imgur.com/Pcl7gSC.png =x80)
 >
 > *Not exactly a unanimous decision by the Supreme Court involving an IP case: [Star Athletica LLC v. Varsity Brands](https://www.supremecourt.gov/opinions/16pdf/15-866_0971.pdf)*, screenshot from PDF, believed to be in the public domain in the US, otherwise believed to be fair use
 
-@@@
+Perhaps once in a while you reach the point where you feel utterly confused about copyright and its many interacting laws: trademarks, contract law, utility patents, design patents. And the doctrines and test to sort out copyright and IP: idea-expression dichotomy, transformational use doctrine, substantial similarity test, conceptual severability test, etc.
+
+Well, do not despair: Supreme Court judges cannot agree either on what is going on ([Star Athletica LLC v. Varsity Brands](https://www.supremecourt.gov/opinions/16pdf/15-866_0971.pdf)). :confused:
+
+The best we can do is to remember: There is the strictly legal side, but there is also the human side and its desire to remix and to be part of a community. When it comes to licensing and sharing, let's proceed with the best of intentions and hope that others will act likewise.
+
+> ![](https://i.imgur.com/hc1F6W2.png =x300)  
+> *The stamp in action...wait a minute, what's that!?...:anguished:*  
+> *It looks like we need at least one more iteration before we can start to roll out high-volume production...*  
+> Photo by Holger Kienle, licensed under CC BY-SA 4.0
+
+With licensing, as with real life, sometimes you won't quite get the expected result. But keep trying! :nerd_face:
